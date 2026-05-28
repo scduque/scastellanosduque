@@ -1,0 +1,534 @@
+/* ==================== CABECERA ==================== */
+.cabecera-tarjeta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px 20px 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.titulo-catalogo {
+  margin: 0;
+  color: #f8fafc;
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.titulo-catalogo span {
+  display: inline-block;
+}
+
+.subtitulo-profesional {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* ==================== LOGO SVG ==================== */
+.logo-cabecera {
+  flex-shrink: 0;
+}
+
+.logo-svg {
+  width: 200px;
+  height: 200px;
+  animation: brujulaSuave 7s ease-in-out infinite alternate !important;
+  transform-origin: center !important;
+  will-change: transform;
+}
+
+/* ==================== ANIMACIÓN BRÚJULA ==================== */
+@keyframes brujulaSuave {
+  0% { transform: rotate(-8deg); }
+  25% { transform: rotate(12deg); }
+  50% { transform: rotate(-360.1deg); }
+  75% { transform: rotate(360.1deg); }
+  100% { transform: rotate(8deg); }
+}
+
+/* ==================== ESTILOS SVG ==================== */
+#circulo-blanco {
+  fill: #F7F7F7;
+  stroke: #020202;
+  stroke-width: 0.5;
+}
+
+.letra {
+  fill: #020202;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 600px) {
+  .cabecera-tarjeta {
+    flex-direction: column;
+    align-items: center; /* Centra los elementos hijos */
+    text-align: center;  /* Centra el texto */
+    padding: 40px 20px 20px;
+    gap: 16px; /* Espaciado limpio entre logo y título */
+  }
+
+  .logo-svg {
+    width: 125px;
+    height: 125px;
+    flex-shrink: 0;
+  }
+
+  .titulo-catalogo {
+    font-size: 1.5rem;
+    white-space: normal; /* Permite saltos de línea naturales */
+    word-wrap: break-word; /* Permite romper palabras largas si es necesario */
+    overflow-wrap: break-word; /* Evita que palabras largas desborden */
+    hyphens: none; /* Evita la división silábica (no hyphenation) */
+    margin: 0;
+    line-height: 1.4; /* Mejora la legibilidad en múltiples líneas */
+  }
+}
+
+
+
+
+/* Texto introductorio */
+.texto-intro-sobre {
+  max-width: 800px;
+  margin: 20px auto 60px;
+  padding: 0 20px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.texto-intro-sobre p {
+  margin: 0;
+}
+
+/* SVG Geométrico */
+#svg-geometrico-sobre {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.12;
+}
+
+/* Formas animadas */
+.forma-geometrica-linea {
+  stroke: #334155;
+  stroke-width: 1;
+  stroke-dasharray: 15, 10;
+  opacity: 0;
+  animation: desvanecerLinea 7s infinite ease-in-out;
+}
+
+.forma-geometrica-triangulo {
+  fill: #3b82f6;
+  opacity: 0.1;
+  animation: flotarTriangulo 9s infinite ease-in-out;
+}
+
+@keyframes desvanecerLinea {
+  0% { opacity: 0; stroke-dashoffset: 50; }
+  50% { opacity: 0.6; }
+  100% { opacity: 0; transform: translateX(30px); }
+}
+
+@keyframes flotarTriangulo {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+  50% { opacity: 0.2; }
+  100% { transform: translateY(-50px) rotate(15deg); opacity: 0; }
+}
+
+
+
+
+
+
+
+/* === SECCIÓN CATÁLOGO DE OBRAS - ESTILO BROCHURE (proporción 5:4) === */
+#seccion-catalogo-obras {
+  position: relative;
+  z-index: 10;
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contenedor-titulo-catalogo {
+  margin-bottom: 60px;
+}
+
+.titulo-catalogo {
+  font-size: 1.8rem;
+  color: #7AB8FF;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.titulo-catalogo::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #7AB8FF;
+  border-radius: 2px;
+}
+
+/* Grid de banners tipo brochure */
+.grid-banners-catalogo {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Banner estilo brochure */
+.banner-brochure {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px; /* igual al ancho de tu imagen */
+  aspect-ratio: 5 / 4; /* 500x400 → 5:4 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  display: block;
+  background: #fff;
+}
+
+.banner-brochure:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen del brochure */
+.imagen-brochure {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen sin deformar */
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.banner-brochure:hover .imagen-brochure {
+  transform: scale(1.02); /* Zoom muy suave */
+}
+
+/* Flecha decorativa */
+.flecha-brochure {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  background: rgba(122, 184, 255, 0.95);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.banner-brochure:hover .flecha-brochure {
+  opacity: 1;
+}
+
+/* Animación de entrada */
+.banner-brochure {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: subirBrochure 0.7s ease forwards;
+}
+
+#banner-c19 { animation-delay: 0.3s; }
+#banner-sv { animation-delay: 0.5s; }
+
+@keyframes subirBrochure {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === RESPONSIVE: Ajuste para móviles === */
+@media (max-width: 768px) {
+  .grid-banners-catalogo {
+    /* Mantén horizontal si el ancho lo permite */
+    flex-direction: row; /* Cambiado: antes era column */
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .banner-brochure {
+    max-width: 100%;
+    /* Ajusta el tamaño máximo al ancho del contenedor */
+    width: 100%;
+    aspect-ratio: 5 / 4; /* Mantiene proporción 5:4 */
+  }
+
+  /* Si el dispositivo es muy angosto, pasa a columna */
+  @media (max-width: 500px) {
+    .grid-banners-catalogo {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .flecha-brochure {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .titulo-catalogo {
+    font-size: 1.6rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Sección perfiles */
+#seccion-perfiles-sobre {
+  position: relative;
+  z-index: 10;
+  padding: 100px 20px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.perfil-grid-sobre {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.tarjeta-perfil-sobre {
+  background: rgba(20, 20, 30, 0.8);
+  border-radius: 16px;
+  overflow: hidden;
+  width: 340px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecerTarjeta 0.8s ease forwards;
+}
+
+.tarjeta-perfil-sobre:nth-child(1) { animation-delay: 0.4s; }
+.tarjeta-perfil-sobre:nth-child(2) { animation-delay: 0.6s; }
+
+@keyframes aparecerTarjeta {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tarjeta-perfil-sobre:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 35px rgba(122, 184, 255, 0.2);
+}
+
+.foto-perfil-sobre {
+  width: 100%;
+  height: 220px;
+  object-fit: scale-down;
+  border-bottom: 3px solid #7AB8FF;
+}
+
+.contenido-perfil-sobre {
+  padding: 24px;
+  text-align: left;
+}
+
+.contenido-perfil-sobre h3 {
+  margin: 0 0 6px;
+  color: #fff;
+  font-size: 1.3em;
+}
+
+.cargo-perfil {
+  color: #7AB8FF;
+  font-size: 0.95em;
+  font-weight: 500;
+  margin: 0 0 14px;
+}
+
+.bio-perfil {
+  color: #ddd;
+  font-size: 0.9em;
+  line-height: 1.6;
+  margin: 0 0 18px;
+}
+
+.bio-perfil p {
+  margin: 0 0 8px;
+}
+
+.bio-perfil p:last-child {
+  margin-bottom: 0;
+}
+
+/* Botones Instagram */
+.btn-perfil-sobre {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  background: transparent;
+  border: 1px solid #7AB8FF;
+  color: #7AB8FF;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: subirBoton 0.7s ease forwards;
+}
+
+#btn-emmanuel { animation-delay: 1.0s; }
+#btn-ernesto { animation-delay: 1.2s; }
+
+@keyframes subirBoton {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-perfil-sobre:hover {
+  background: #7AB8FF;
+  color: #000;
+  box-shadow: 0 4px 15px rgba(122, 184, 255, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .perfil-grid-sobre {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta-perfil-sobre {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .cabecera-tarjeta,
+  .texto-intro-sobre {
+    padding: 0 16px;
+  }
+
+  #seccion-perfiles-sobre {
+    padding: 80px 16px 60px;
+  }
+}
+
+/* === NUEVAS SECCIONES PROFESIONALES === */
+.seccion-trayectoria, .seccion-competencias {
+  margin-top: 60px;
+  text-align: left;
+}
+
+.item-trayectoria {
+  margin-bottom: 30px;
+  border-left: 2px solid #7AB8FF;
+  padding-left: 20px;
+}
+
+.item-trayectoria h3 {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.item-trayectoria .fecha {
+  color: #3b82f6;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.item-trayectoria ul {
+  margin-top: 10px;
+  list-style: none;
+  margin-left: 0;
+  color: #ddd;
+  font-size: 0.95rem;
+}
+
+.grid-competencias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card-competencia {
+  background: rgba(59, 130, 246, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.card-competencia i {
+  font-size: 2rem;
+  color: #3b82f6;
+  margin-bottom: 15px;
+}
+
+.card-competencia h4 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+.twitter_contenedor_responsivo {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.twitter_contenedor_responsivo iframe {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 550 / 650;
+  border: none;
+}

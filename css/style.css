@@ -1,0 +1,669 @@
+/* Base Typography Settings
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+	font-size:16px;
+}
+
+/* Grid
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .container {
+	position:relative;
+	width:100%;
+	max-width:100%;     				/* 600px */
+    text-align:center;
+	margin:0 auto;
+	padding:3rem 1.25rem 0 1.25rem;
+	box-sizing:border-box;
+}
+.container-left {
+	position:relative;
+	width:100%;
+	max-width:37.5rem;
+	text-align:left;
+	margin:0 auto;
+	padding:0 1.25rem;
+	box-sizing:border-box;
+}
+.container-left p {
+	margin-bottom: 1rem;  				/* 16px space between paragraphs */
+  }
+.column {
+	position:center;
+	width:100%;
+	float:center;
+	box-sizing:border-box;
+}
+/* For devices larger than 400px */
+  @media (min-width:25rem) {            /* 400px */
+    .container {
+	width:85%;
+	padding-left:0;
+	padding-right:0;
+}
+}/* For devices larger than 550px */
+  @media (min-width:34.375rem) {        /* 550px */
+    .container {
+	width:80%;
+}
+.column,.columns {
+	margin-left:0;
+}
+.column:first-child,.columns:first-child {
+	margin-left:0;
+}
+}
+
+/* Base Styles
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  body {
+	margin:0;
+	padding:0;
+	background-color:#ffffff;
+	color:#1a1a1a;
+	font-family:"Open Sans",system-ui;
+	font-size:1.125rem;     				/* 18px */
+    font-weight:400;
+	line-height:1.6;
+}
+
+/* Typography
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  h1 {
+	margin:0 0 0.5rem 0;
+	font-size:3rem;         		/* 48px */
+    font-weight:800;
+	line-height:1;
+	letter-spacing:0;
+	word-wrap:break-word;
+	overflow-wrap:break-word;
+	hyphens:auto;           		/* Delete this to remove automatic hyphen on line break */
+}
+.container p {
+	margin:0 0 2rem 0;
+}
+
+/* Base Typography Settings
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Base size - 16px browser default */
+:root {
+  font-size:16px;           /* Using a 1.25 modular scale for typography */
+  --scale-0:1rem;           /* 16px */
+  --scale-1:1.25rem;        /* 20px */
+  --scale-2:1.563rem;       /* 25px */
+  --scale-3:1.953rem;       /* 31px */
+  --scale-4:2.441rem;       /* 39px */
+  --scale-5:3.052rem;       /* 49px */
+  
+  /* Spacing units */
+  --spacing-xs:0.5rem;      /* 8px */
+  --spacing-s:1rem;         /* 16px */
+  --spacing-m:1.5rem;       /* 24px */
+  --spacing-l:2rem;         /* 32px */
+  --spacing-xl:3rem;        /* 48px */
+  --spacing-xxl:4rem;       /* 64px */
+}
+
+
+/* Avatar */
+.avatar {
+	width: 8rem;             /* 128px */
+	height: 8rem;
+	border-radius: 50%;
+	object-fit: cover;
+	background-position: center;
+	margin-bottom: var(--spacing-l);
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+  }
+
+
+/* Typography Scale */
+h1 {
+	margin:0 0 var(--spacing-m) 0;
+	font-size:var(--scale-5);           /* ~49px */
+  	font-weight:800;
+	line-height:1.1;
+	letter-spacing:-0.02em;
+	word-wrap:break-word;
+	overflow-wrap:break-word;
+}
+body {
+	font-size:var(--scale-1);           /* 20px */
+  	line-height:1.6;
+}
+.container p {
+	margin:0 0 var(--spacing-xl) 0;
+	font-size:var(--scale-1);
+	line-height:1.6;
+}
+
+/* Container spacing */
+.container {
+	padding:var(--spacing-xl) var(--spacing-m) 0 var(--spacing-m);
+	text-align:center;
+}
+
+/* Footer */
+footer {
+	margin:var(--spacing-xxl) 0;            /* 4rem (64px) top and bottom */
+    font-size:var(--scale-0);
+}
+
+/* Responsive adjustments */
+@media (max-width:34.375rem) {              /* 550px */
+  h1 {
+	font-size:var(--scale-4);
+}
+body {
+	font-size:var(--scale-0);
+}
+.container p {
+	font-size:var(--scale-0);
+}
+.avatar {
+	margin-bottom:var(--spacing-m);
+}
+footer {
+	margin:var(--spacing-xl) 0;         	/* 3rem (48px) top and bottom */
+}
+}
+
+/* Links
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  a {
+	color:#2457F5;
+	text-decoration:underline;
+}
+a:hover {
+	color:#7AB8FF;
+}
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,button {
+	display:inline-flex;
+	align-items:center;
+	justify-content:center;
+	width:18.75rem;             	/* 300px */
+ 	min-height:3rem;                /* 48px */
+  	padding:0.75rem 1rem;         	/* 12px ; 16px */
+  	font-size:1.125rem;           	/* 18px */
+  	font-weight:700;
+	text-decoration:none;
+	white-space:normal;
+  	background-color:var(--button-background,transparent);
+	color:var(--button-text,#000000);
+	border:var(--button-border,none);
+	border-radius:0.5rem;
+	cursor:pointer;
+	box-sizing:border-box;
+	hyphens:auto;               	/* Delete this to remove automatic hyphen on line break */
+  	margin-bottom:1rem;
+	text-align:center;
+	line-height:1.3;
+}
+
+/* Icons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.icon {
+	width:1.25rem;
+	height:1.25rem;
+	margin-right:0.5rem;
+	flex-shrink:0;
+}
+
+/* Avatar
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.avatar {
+	width: 12rem;
+	height: 12rem;
+	object-fit: cover;
+	aspect-ratio: 1 / 1;
+	background-position: center;
+	margin-bottom: var(--spacing-xs);
+  }
+
+   /* Modifier for no avatar rounding */
+   .avatar--none {
+	border-radius: 0%;
+  }
+
+  /* Modifier for rounded avatar */
+  .avatar--rounded {
+	border-radius: 9999px;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	flex-shrink: 0;
+  }
+  
+  /* Modifier for slightly rounded corners */
+  .avatar--soft {
+	border-radius: 0.5rem;   /* 8px rounded corners */
+  }
+
+
+/* Theme System
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Light theme is default above */
+  
+/* Dark theme */
+:root.theme-dark {
+	color-scheme:dark;
+}
+:root.theme-dark :focus-visible {
+	outline: 2px solid white;
+	outline-offset: 2px;
+  }
+:root.theme-dark body {
+	background-color:#0f172a;
+	color:#ffffff;
+}
+:root.theme-dark a:not(.button) {
+	color:white;
+}
+:root.theme-dark a:not(.button):hover {
+	color:#7AB8FF;
+}
+
+/* Auto theme */
+:root.theme-auto {
+	color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark) {
+	:root.theme-auto body {
+	background-color:#000000;
+	color:#ffffff;
+}
+:root.theme-auto :focus-visible {
+    outline: 2px solid white;
+    outline-offset: 2px;
+  }
+:root.theme-auto a:not(.button) {
+	color:#4899F7;
+}
+:root.theme-auto a:not(.button):hover {
+	color:#7AB8FF;
+}
+}
+
+/* Button Text Color Override
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .button:hover,button:hover {
+	color:var(--button-text);
+}
+
+
+/* Responsive Typography
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  @media (max-width:34.375rem) {            /* 550px */
+    h1 {
+	font-size:2rem;                         /* 32px */
+	}
+	body {
+	font-size:1rem;                    		/* 16px */
+	}
+}
+
+/* Privacy Page Styles
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+nav {
+	margin:var(--spacing-l) 0;
+	text-align:left;
+}
+section {
+	margin:var(--spacing-xl) 0;
+	text-align:left;
+}
+h2 {
+	font-size:var(--scale-3);
+	font-weight:700;
+	margin-bottom:var(--spacing-m);
+}
+h3 {
+	font-size:var(--scale-2);
+	font-weight:600;
+	margin:var(--spacing-l) 0 var(--spacing-s) 0;
+}
+ul {
+	list-style:none;
+	padding:0;
+	margin:0 0 var(--spacing-m) 0;
+}
+ul li {
+	margin-bottom:var(--spacing-xs);
+}
+
+/* Privacy page specific responsive adjustments */
+  @media (max-width:34.375rem) {
+	h2 {
+	font-size:var(--scale-2);
+	}
+	h3 {
+	font-size:var(--scale-1);
+	}
+	section {
+	margin:var(--spacing-l) 0;
+	}
+}
+
+/* Font Face Definitions
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+@font-face {
+	font-display:swap;
+	font-family:'Open Sans';
+	font-style:normal;
+	font-weight:400;
+	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.eot');
+	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.eot?#iefix') format('embedded-opentype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff2') format('woff2'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff') format('woff'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.ttf') format('truetype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.svg#OpenSans') format('svg');
+}
+@font-face {
+	font-display:swap;
+	font-family:'Open Sans';
+	font-style:normal;
+	font-weight:600;
+	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.eot');
+	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.eot?#iefix') format('embedded-opentype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.woff2') format('woff2'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.woff') format('woff'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.ttf') format('truetype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.svg#OpenSans') format('svg');
+}
+@font-face {
+	font-display:swap;
+	font-family:'Open Sans';
+	font-style:normal;
+	font-weight:700;
+	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.eot');
+	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.eot?#iefix') format('embedded-opentype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.woff2') format('woff2'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.woff') format('woff'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.ttf') format('truetype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.svg#OpenSans') format('svg');
+}
+@font-face {
+	font-display:swap;
+	font-family:'Open Sans';
+	font-style:normal;
+	font-weight:800;
+	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.eot');
+	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.eot?#iefix') format('embedded-opentype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff2') format('woff2'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff') format('woff'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.ttf') format('truetype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.svg#OpenSans') format('svg');
+}
+
+/** NEW STUFF**/
+
+  .mobile-menu {
+	position: fixed;
+	bottom:50px;
+	right:-70px;
+	z-index: 1000;
+  }
+  
+  .menu-toggle {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+  }
+  
+  .menu-icon {
+	display: block;
+	width: 12px;
+	height: 12px;
+	background-color: #bebebe;
+	border-radius:50px;
+	margin: 1px 0;
+	margin-top:13px;
+	transition: 0.4s;
+  }
+  
+  .menu-text {
+    color: #bebebe; /* Cambia el color del texto a rojo */
+    font-size: 12px; /* Ajusta el tamaño de letra según necesidades */
+    display: block; /* Asegúrate de que el texto se muestre correctamente */
+    position: absolute; /* Posicionamiento absoluto para centrarlo dentro del botón */
+    bottom: 40px; /* Ajusta debajo del círculo para que se vea claramente */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+  /* Mantén la animación para el icono de menú al abrirse */
+  .menu-toggle.open .menu-icon:nth-child(1) {
+	transform: translateY(-12px);
+  }
+  
+  .menu-toggle.open .menu-icon:nth-child(2) {
+	opacity: 1;
+  }
+  
+  .menu-toggle.open .menu-icon:nth-child(3) {
+	transform: translateY(12px);
+  }
+  
+  .menu-content {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 250px;
+	height: 100%;
+	background: black;
+	padding: 20px;
+	box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+  }
+  
+  .menu-content a {
+	display: block;
+	color: rgb(255, 255, 255);
+	padding: 10px 0;
+	text-decoration: #ffffff;
+	font-size: 18px;
+  }
+  
+  .menu-content a:hover {
+	color: #7AB8FF;
+  }
+  
+  /* Animación para el icono de menú al abrirse */
+  .menu-toggle.open .menu-icon:nth-child(1) {
+	transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .menu-toggle.open .menu-icon:nth-child(2) {
+	opacity: 0;
+  }
+  
+  .menu-toggle.open .menu-icon:nth-child(3) {
+	transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+
+
+
+
+
+
+
+  
+
+
+
+  .whatsapp {
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:50px;
+	background-color: #1a1a1a;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	font-size:36px;
+	z-index:100;
+  }
+  
+  .whatsapp-icon {
+	margin-top:13px;
+  }
+
+  /* Brand Button Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Only include brand-specific button styling here */
+.button,button {
+	color:var(--button-text,#000000);
+	background-color:var(--button-background,transparent);
+	  border:var(--button-border,none);
+	  transition:filter 0.2s ease,transform 0.2s ease;
+  }
+  
+  /* Global Button Hover Effect
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .button:hover,button:hover {
+	  filter:brightness(90%);
+	  transform:translateY(-1px);
+  }
+  
+  /* Button Icons
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .icon {
+	  filter:var(--icon-filter,none);
+  }
+  
+  /* Brand-Specific Styles
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  
+  /* Default */
+  .button.button-default {
+	  --button-text:#ffffff;
+	  --button-background:#1e40af;
+  }
+  
+  /* Facebook */
+  .button-faceb {
+	  --button-text:#ffffff;
+	  --button-background:#1877f2;
+  }
+  
+  /* Facebook Messenger */
+  .button-messenger {
+	  --button-text:#ffffff;
+	  background-image:linear-gradient(25deg,#0099ff,#5f5dff,#a033ff,#c740cc,#ff5280,#ff7061);
+  }
+
+  /* Google Black */
+  .button-google-black {
+	  --button-text:#FFFFFF;
+	  --button-background:#000000;
+	  --button-border:1px solid #FFFFFF;
+  }
+  
+  /* Instagram */
+  .button-instagram {
+	  --button-text:#ffffff;
+	  background-image:linear-gradient(-135deg,#1400c8,#b900b4,#f50000);
+  }
+
+  /* PayPal */
+  .button-paypal {
+	  --button-text:#ffffff;
+	  --button-background:#002991;
+	--button-border:1px solid #FFFFFF;
+  }
+  
+  /* Shop */
+  .button-shop {
+	  --button-text:#ffffff;
+	  --button-background:#5A31F4;
+  }
+  
+  /* Telegram */
+  .button-telegram {
+	  --button-text:#ffffff;
+	  --button-background:#3faee8;
+  }
+  
+  /* TikTok */
+  .button-tiktok {
+	  --button-text:#ffffff;
+	  --button-background:#000000;
+	  --button-border:1px solid #FFFFFF;
+  }
+
+  /* WhatsApp */
+  .button-whatsapp {
+	  --button-text:#ffffff;
+	  --button-background:#455a64;
+  }
+  
+  /* X */
+  .button-x {
+	  --button-text:#FFFFFF;
+	  --button-background:#000000;
+	  --button-border:1px solid #FFFFFF;
+  }
+  
+  /* YouTube */
+  .button-yt {
+	  --button-text:#ffffff;
+	  --button-background:#282828;
+	  --button-border:none;
+  }
+
+
+
+
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Ajusta este valor para hacerlo más grande en escritorio */
+  margin: 0 auto; /* Centra el video */
+  padding-bottom: 56.25%; /* Relación de aspecto 16:9 (9 / 16 = 0.5625) */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+
+
+
+
+
+
+
+  /*
+    __/\\\\\\\\\\\\\\\__/\\\________/\\\____/\\\\\\\\\________/\\\\\\\\\___________/\\\\\_______/\\\\\_____/\\\____________/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\____________/\\\_________________/\\\\\\\\\_____________________/\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\\\\__/\\\\\\\\\\\\\\\_______________/\\\\\\\\\\\_______/\\\\\\\\\_______________/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\__________________/\\\\\\\\\__/\\\________/\\\_        
+     _\///////\\\/////__\/\\\_______\/\\\__/\\\///////\\\____/\\\///////\\\_______/\\\///\\\____\/\\\\\\___\/\\\___________\/\\\////////\\\__\/\\\///////////____________\/\\\_______________/\\\\\\\\\\\\\________________/\\\////////__\/////\\\///__\///////\\\/////__\/\\\///////////______________/\\\/////////\\\___/\\\\\\\\\\\\\____________\/\\\////////\\\__\/\\\///////////________________/\\\////////__\/\\\_______\/\\\_       
+      _______\/\\\_______\/\\\_______\/\\\_\/\\\_____\/\\\___\/\\\_____\/\\\_____/\\\/__\///\\\__\/\\\/\\\__\/\\\___________\/\\\______\//\\\_\/\\\_______________________\/\\\______________/\\\/////////\\\_____________/\\\/_______________\/\\\___________\/\\\_______\/\\\________________________\//\\\______\///___/\\\/////////\\\___________\/\\\______\//\\\_\/\\\_________________________/\\\/___________\//\\\______/\\\__      
+       _______\/\\\_______\/\\\_______\/\\\_\/\\\\\\\\\\\/____\/\\\\\\\\\\\/_____/\\\______\//\\\_\/\\\//\\\_\/\\\___________\/\\\_______\/\\\_\/\\\\\\\\\\\_______________\/\\\_____________\/\\\_______\/\\\____________/\\\_________________\/\\\___________\/\\\_______\/\\\\\\\\\\\_________________\////\\\_________\/\\\_______\/\\\___________\/\\\_______\/\\\_\/\\\\\\\\\\\________________/\\\______________\//\\\____/\\\___     
+        _______\/\\\_______\/\\\_______\/\\\_\/\\\//////\\\____\/\\\//////\\\____\/\\\_______\/\\\_\/\\\\//\\\\/\\\___________\/\\\_______\/\\\_\/\\\///////________________\/\\\_____________\/\\\\\\\\\\\\\\\___________\/\\\_________________\/\\\___________\/\\\_______\/\\\///////_____________________\////\\\______\/\\\\\\\\\\\\\\\___________\/\\\_______\/\\\_\/\\\///////________________\/\\\_______________\//\\\__/\\\____    
+         _______\/\\\_______\/\\\_______\/\\\_\/\\\____\//\\\___\/\\\____\//\\\___\//\\\______/\\\__\/\\\_\//\\\/\\\___________\/\\\_______\/\\\_\/\\\_______________________\/\\\_____________\/\\\/////////\\\___________\//\\\________________\/\\\___________\/\\\_______\/\\\_______________________________\////\\\___\/\\\/////////\\\___________\/\\\_______\/\\\_\/\\\_______________________\//\\\_______________\//\\\/\\\_____   
+          _______\/\\\_______\//\\\______/\\\__\/\\\_____\//\\\__\/\\\_____\//\\\___\///\\\__/\\\____\/\\\__\//\\\\\\___________\/\\\_______/\\\__\/\\\_______________________\/\\\_____________\/\\\_______\/\\\____________\///\\\______________\/\\\___________\/\\\_______\/\\\________________________/\\\______\//\\\__\/\\\_______\/\\\___________\/\\\_______/\\\__\/\\\________________________\///\\\______________\//\\\\\______  
+           _______\/\\\________\///\\\\\\\\\/___\/\\\______\//\\\_\/\\\______\//\\\____\///\\\\\/_____\/\\\___\//\\\\\___________\/\\\\\\\\\\\\/___\/\\\\\\\\\\\\\\\___________\/\\\\\\\\\\\\\\\_\/\\\_______\/\\\______________\////\\\\\\\\\__/\\\\\\\\\\\_______\/\\\_______\/\\\\\\\\\\\\\\\___________\///\\\\\\\\\\\/___\/\\\_______\/\\\___________\/\\\\\\\\\\\\/___\/\\\\\\\\\\\\\\\______________\////\\\\\\\\\______\//\\\_______ 
+            _______\///___________\/////////_____\///________\///__\///________\///_______\/////_______\///_____\/////____________\////////////_____\///////////////____________\///////////////__\///________\///__________________\/////////__\///////////________\///________\///////////////______________\///////////_____\///________\///____________\////////////_____\///////////////__________________\/////////________\///________
+      
+      
+                                                                     =#                                    
+                                                                    =@@#                                   
+                                                                   -@@@@*                                  
+                                                                  :@@@@@@+                                 
+                             .=============.           :==========%@@@@@@@=                                
+                              #@@@@@@@@@@@+           :@@@@@@@@@@@@@@@@@@@@-                               
+                              .%@@@@@@@@@*           :@@@@@@@@@@@@@@@@@@@@@@-                              
+                               .%@@@@@@@#           :%@@@@@@@@@@@@@@@@@@@@@@#                              
+                                :@@@@@@%.          .%@@@@@@@@@@@@@@@@@@@@@*:                               
+                                 -@@@@%.          .%@@@@@@@@@@@@@@@@@@@%+.                                 
+                                  ----.          .#@@@@@@@@%-----------                                    
+                                                 #@@@@@@@@=                                                
+                                                *@@@@@@@#.                                                 
+                                               *@@@@@@%-                                                   
+                                              +@@@@@@*.                                                    
+                                             +@@@@@%:                                                      
+                                            =@@@@@+                                                        
+                                ...........=@@@@#.                                                         
+                               :%@@@@@@@@@@@@@%-                                                           
+                                .############*.  
+
+Este template fue editado por TURRON DE LA CITE SA DE CV // AGENCIA DE PUBLICIDAD // para más información contactar a través de tci.publicidad@hotmail.com 
+*/
