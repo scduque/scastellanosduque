@@ -59,8 +59,6 @@
     gap: 16px; /* Clean spacing between logo and title */
   }
 
-  .logo-svg { }
-
   .titulo-catalogo {
     font-size: 1.5rem;
     white-space: normal; /* Allows natural line breaks */
@@ -109,7 +107,6 @@
   fill: #3b82f6;
   opacity: 0.1;
   animation: flotarTriangulo 9s infinite ease-in-out;
-}
 }
 
 
@@ -378,11 +375,12 @@
   }
 }
 
+/*
                                :%@@@@@@@@@@@@@%-                                                           
                                 .############*.  
 
 This template was edited by TURRON DE LA CITE SA DE CV // ADVERTISING AGENCY // for more information contact via tci.publicidad@hotmail.com 
-Developer: ALÁN MEZA CHÁVEZ <https://www.linkedin.com/in/alanmzch/> */
+Developer: ALÁN MEZA CHÁVEZ https://www.linkedin.com/in/alanmzch/ */
 
 /* === NEW PROFESSIONAL SECTIONS === */
 .seccion-trayectoria, .seccion-competencias {
