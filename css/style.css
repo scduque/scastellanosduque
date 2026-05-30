@@ -414,7 +414,7 @@ section {
 }
 
 .metric {
-  padding: 1.5rem;
+  padding: clamp(1.25rem, 4vw, 1.75rem);
   background: var(--bg-secondary);
   border-left: 4px solid var(--accent);
   border-radius: 0 1rem 1rem 0;
@@ -431,7 +431,7 @@ section {
   transform: translateY(-5px);
 }
 
-.metric h4 { font-size: 2.5rem; color: var(--accent); margin-bottom: 0; }
+.metric h4 { font-size: clamp(1.75rem, 6vw, 2.5rem); color: var(--accent); margin-bottom: 0; }
 .metric p { 
   font-size: 0.875rem; 
   text-transform: uppercase; 
@@ -443,7 +443,7 @@ section {
 }
 
 .metric i {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 5vw, 2rem);
   color: var(--accent);
   transition: color 0.3s ease;
 }
