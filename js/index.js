@@ -1,5 +1,10 @@
 function generarFormasGeometricas() {
-  const contenedor = document.getElementById("animaciones-geometricas-sobre");
+  // Sincronizamos con el ID definido en index.css (#svg-geometrico-sobre)
+  const contenedor = document.getElementById("svg-geometrico-sobre");
+  
+  // Verificación de seguridad para evitar errores en la consola si el elemento no existe
+  if (!contenedor) return;
+
   const colors = ["#334155", "#1e3a8a"];
 
   // Crear líneas

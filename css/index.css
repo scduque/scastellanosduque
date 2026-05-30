@@ -1,12 +1,8 @@
-/* ==================== CABECERA ==================== */
+/* ==================== HEADER ==================== */
 .cabecera-tarjeta {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 60px 20px 30px;
-  max-width: 900px;
-  margin: 0 auto;
+  margin-top: 10px;
 }
 
 .titulo-catalogo {
@@ -30,7 +26,7 @@
   margin-top: 10px;
 }
 
-/* ==================== LOGO SVG ==================== */
+/* ==================== SVG LOGO ==================== */
 .logo-cabecera {
   flex-shrink: 0;
 }
@@ -38,21 +34,11 @@
 .logo-svg {
   width: 200px;
   height: 200px;
-  animation: brujulaSuave 7s ease-in-out infinite alternate !important;
   transform-origin: center !important;
   will-change: transform;
 }
 
-/* ==================== ANIMACIÓN BRÚJULA ==================== */
-@keyframes brujulaSuave {
-  0% { transform: rotate(-8deg); }
-  25% { transform: rotate(12deg); }
-  50% { transform: rotate(-360.1deg); }
-  75% { transform: rotate(360.1deg); }
-  100% { transform: rotate(8deg); }
-}
-
-/* ==================== ESTILOS SVG ==================== */
+/* ==================== SVG STYLES ==================== */
 #circulo-blanco {
   fill: #F7F7F7;
   stroke: #020202;
@@ -67,26 +53,22 @@
 @media (max-width: 600px) {
   .cabecera-tarjeta {
     flex-direction: column;
-    align-items: center; /* Centra los elementos hijos */
-    text-align: center;  /* Centra el texto */
+    align-items: center; /* Centers child elements */
+    text-align: center;  /* Centers the text */
     padding: 40px 20px 20px;
-    gap: 16px; /* Espaciado limpio entre logo y título */
+    gap: 16px; /* Clean spacing between logo and title */
   }
 
-  .logo-svg {
-    width: 125px;
-    height: 125px;
-    flex-shrink: 0;
-  }
+  .logo-svg { }
 
   .titulo-catalogo {
     font-size: 1.5rem;
-    white-space: normal; /* Permite saltos de línea naturales */
-    word-wrap: break-word; /* Permite romper palabras largas si es necesario */
-    overflow-wrap: break-word; /* Evita que palabras largas desborden */
-    hyphens: none; /* Evita la división silábica (no hyphenation) */
+    white-space: normal; /* Allows natural line breaks */
+    word-wrap: break-word; /* Allows breaking long words if necessary */
+    overflow-wrap: break-word; /* Prevents long words from overflowing */
+    hyphens: none; /* Avoids syllabic division (no hyphenation) */
     margin: 0;
-    line-height: 1.4; /* Mejora la legibilidad en múltiples líneas */
+    line-height: 1.4; /* Improves readability on multiple lines */
   }
 }
 
@@ -97,36 +79,30 @@
 .texto-intro-sobre {
   max-width: 800px;
   margin: 20px auto 60px;
-  padding: 0 20px;
-  text-align: center;
-  color: #94a3b8;
-  font-size: 1rem;
-  line-height: 1.7;
+  margin: 0;
 }
 
 .texto-intro-sobre p {
   margin: 0;
 }
 
-/* SVG Geométrico */
+@keyframes fadeInSVG {
+  from { opacity: 0; }
+  to { opacity: 0.12; }
+}
+
+/* Geometric SVG */
 #svg-geometrico-sobre {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 500px;
-  z-index: 1;
-  pointer-events: none;
-  opacity: 0.12;
+  opacity: 0;
+  animation: fadeInSVG 2s ease-in-out forwards;
 }
 
-/* Formas animadas */
+/* Animated shapes */
 .forma-geometrica-linea {
   stroke: #334155;
   stroke-width: 1;
-  stroke-dasharray: 15, 10;
-  opacity: 0;
-  animation: desvanecerLinea 7s infinite ease-in-out;
 }
 
 .forma-geometrica-triangulo {
@@ -134,17 +110,6 @@
   opacity: 0.1;
   animation: flotarTriangulo 9s infinite ease-in-out;
 }
-
-@keyframes desvanecerLinea {
-  0% { opacity: 0; stroke-dashoffset: 50; }
-  50% { opacity: 0.6; }
-  100% { opacity: 0; transform: translateX(30px); }
-}
-
-@keyframes flotarTriangulo {
-  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
-  50% { opacity: 0.2; }
-  100% { transform: translateY(-50px) rotate(15deg); opacity: 0; }
 }
 
 
@@ -153,14 +118,11 @@
 
 
 
-/* === SECCIÓN CATÁLOGO DE OBRAS - ESTILO BROCHURE (proporción 5:4) === */
+/* === WORKS CATALOG SECTION - BROCHURE STYLE (5:4 ratio) === */
 #seccion-catalogo-obras {
   position: relative;
   z-index: 10;
-  padding: 100px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
+  border-radius: 2px;
 }
 
 .contenedor-titulo-catalogo {
@@ -189,26 +151,25 @@
   border-radius: 2px;
 }
 
-/* Grid de banners tipo brochure */
+/* Brochure type banner grid */
 .grid-banners-catalogo {
   display: flex;
   gap: 30px;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
-/* Banner estilo brochure */
+/* Brochure style banner */
 .banner-brochure {
   position: relative;
   border-radius: 14px;
   overflow: hidden;
   width: 100%;
-  max-width: 500px; /* igual al ancho de tu imagen */
+  max-width: 500px; /* equal to your image width */
   aspect-ratio: 5 / 4; /* 500x400 → 5:4 */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
   display: block;
-  background: #fff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .banner-brochure:hover {
@@ -216,44 +177,30 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* Imagen del brochure */
+/* Brochure image */
 .imagen-brochure {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajusta la imagen sin deformar */
+  object-fit: cover; /* Adjusts the image without distortion */
   display: block;
   transition: transform 0.5s ease;
 }
 
 .banner-brochure:hover .imagen-brochure {
-  transform: scale(1.02); /* Zoom muy suave */
+  transform: scale(1.02); /* Very smooth zoom */
 }
 
-/* Flecha decorativa */
+/* Decorative arrow */
 .flecha-brochure {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 44px;
-  height: 44px;
-  background: rgba(122, 184, 255, 0.95);
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  opacity: 0;
-  transition: all 0.3s ease;
-  pointer-events: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  opacity: 1;
 }
 
 .banner-brochure:hover .flecha-brochure {
   opacity: 1;
 }
 
-/* Animación de entrada */
+/* Entrance animation */
 .banner-brochure {
   opacity: 0;
   transform: translateY(20px);
@@ -270,23 +217,23 @@
   }
 }
 
-/* === RESPONSIVE: Ajuste para móviles === */
+/* === RESPONSIVE: Adjustment for mobiles === */
 @media (max-width: 768px) {
   .grid-banners-catalogo {
-    /* Mantén horizontal si el ancho lo permite */
-    flex-direction: row; /* Cambiado: antes era column */
+    /* Keep horizontal if width allows */
+    flex-direction: row; /* Changed: before it was column */
     justify-content: center;
     gap: 20px;
   }
 
   .banner-brochure {
     max-width: 100%;
-    /* Ajusta el tamaño máximo al ancho del contenedor */
+    /* Adjust maximum size to container width */
     width: 100%;
-    aspect-ratio: 5 / 4; /* Mantiene proporción 5:4 */
+    aspect-ratio: 5 / 4; /* Maintains 5:4 ratio */
   }
 
-  /* Si el dispositivo es muy angosto, pasa a columna */
+  /* If the device is very narrow, switches to column */
   @media (max-width: 500px) {
     .grid-banners-catalogo {
       flex-direction: column;
@@ -316,13 +263,11 @@
 
 
 
-/* Sección perfiles */
+/* Profile section */
 #seccion-perfiles-sobre {
   position: relative;
   z-index: 10;
-  padding: 100px 20px 80px;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 0 8px;
 }
 
 .perfil-grid-sobre {
@@ -400,21 +345,14 @@
   margin-bottom: 0;
 }
 
-/* Botones Instagram */
+/* Instagram buttons */
 .btn-perfil-sobre {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 10px 18px;
-  background: transparent;
-  border: 1px solid #7AB8FF;
-  color: #7AB8FF;
-  text-decoration: none;
-  border-radius: 30px;
-  font-size: 0.9em;
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(122, 184, 255, 0.5);
   opacity: 0;
-  animation: subirBoton 0.7s ease forwards;
+  transform: translateY(10px);
+  animation: aparecerTarjeta 0.5s ease forwards;
 }
 
 #btn-emmanuel { animation-delay: 1.0s; }
@@ -437,34 +375,53 @@
 @media (max-width: 768px) {
   .perfil-grid-sobre {
     flex-direction: column;
-    align-items: center;
-  }
-
-  .tarjeta-perfil-sobre {
-    width: 100%;
-    max-width: 360px;
-  }
-
-  .cabecera-tarjeta,
-  .texto-intro-sobre {
-    padding: 0 16px;
-  }
-
-  #seccion-perfiles-sobre {
-    padding: 80px 16px 60px;
   }
 }
 
-/* === NUEVAS SECCIONES PROFESIONALES === */
+                               :%@@@@@@@@@@@@@%-                                                           
+                                .############*.  
+
+This template was edited by TURRON DE LA CITE SA DE CV // ADVERTISING AGENCY // for more information contact via tci.publicidad@hotmail.com 
+Developer: ALÁN MEZA CHÁVEZ <https://www.linkedin.com/in/alanmzch/> */
+
+/* === NEW PROFESSIONAL SECTIONS === */
 .seccion-trayectoria, .seccion-competencias {
-  margin-top: 60px;
-  text-align: left;
+  margin-top: 0;
+}
+
+@media (min-width: 1024px) {
+  .seccion-trayectoria, .seccion-competencias { text-align: left; }
 }
 
 .item-trayectoria {
-  margin-bottom: 30px;
-  border-left: 2px solid #7AB8FF;
-  padding-left: 20px;
+  margin-bottom: 1.5rem;
+  border-left: none;
+  text-wrap: pretty;
+  transition: all 0.4s ease;
+  border-radius: 1rem;
+  padding: 3rem 0;
+}
+
+.item-trayectoria:hover,
+.item-trayectoria.active-scroll {
+  background-color: #f2f2f2;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  border-left: 8px solid var(--accent);
+}
+
+.item-trayectoria:hover h3,
+.item-trayectoria.active-scroll h3 {
+  color: var(--accent);
+}
+
+.item-trayectoria:hover .press-meta span:first-child,
+.item-trayectoria.active-scroll .press-meta span:first-child,
+.item-trayectoria:hover ul,
+.item-trayectoria.active-scroll ul,
+.item-trayectoria:hover li,
+.item-trayectoria.active-scroll li {
+  color: #000000;
 }
 
 .item-trayectoria h3 {
@@ -482,16 +439,55 @@
 
 .item-trayectoria ul {
   margin-top: 10px;
-  list-style: none;
-  margin-left: 0;
+  list-style: disc;
+  margin-left: 1.25rem;
   color: #ddd;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.item-trayectoria .trayectoria-info {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .item-trayectoria {
+    margin-bottom: 2.5rem;
+    padding: 3rem 1.5rem 3rem 1.25rem;
+    border-left: 3px solid var(--accent);
+  }
+  
+  .item-trayectoria h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .item-trayectoria .fecha {
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .item-trayectoria ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+  }
+  
+  .item-trayectoria li {
   font-size: 0.95rem;
+  line-height: 1.65;
+  }
+}
+
+@media (min-width: 1024px) {
+  .item-trayectoria .trayectoria-info {
+    padding: 0 3rem;
+  }
 }
 
 .grid-competencias {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  gap: 1.25rem;
   margin-top: 30px;
 }
 
@@ -499,20 +495,39 @@
   background: rgba(59, 130, 246, 0.05);
   padding: 20px;
   border-radius: 12px;
-  text-align: center;
+  margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px 15px;
+  transition: all 0.3s ease;
 }
 
 .card-competencia i {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #3b82f6;
-  margin-bottom: 15px;
+  transition: all 0.3s ease;
 }
 
 .card-competencia h4 {
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
+.card-competencia p {
+  font-size: 1.15rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  grid-column: 1 / -1;
+}
+
+.card-competencia:hover {
+  background: #3b82f6;
+}
+
+.card-competencia:hover i, .card-competencia:hover h4, .card-competencia:hover p {
+  color: #fff;
+}
 
 
 
@@ -531,4 +546,14 @@
   height: auto;
   aspect-ratio: 550 / 650;
   border: none;
+}
+
+@media (min-width: 1024px) {
+  .seccion-trayectoria {
+    max-width: 850px;
+    margin: 60px auto 0;
+  }
+  .item-trayectoria {
+    margin-bottom: 4rem;
+  }
 }
