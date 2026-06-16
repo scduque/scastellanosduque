@@ -168,27 +168,110 @@ document.addEventListener('DOMContentLoaded', () => {
             applyFilters();
         };
 
+        let lastClickTime = 0;
+        let lastClickedBtn = null;
+        let primaryFilter = null;  // Primer filtro seleccionado
+        let secondaryFilter = null;  // Segundo filtro seleccionado
+        let blockedClickCount = 0;  // Contador de clics en botones bloqueados
+        let blockedClickTimer = null;  // Timer para resetear contador
+
+        // Función para actualizar tonos de los filtros
+        const updateFilterHierarchy = () => {
+            filterButtons.forEach(btn => {
+                btn.classList.remove('filter-primary', 'filter-secondary', 'filter-tertiary');
+            });
+            
+            if (primaryFilter) {
+                primaryFilter.classList.add('filter-primary');
+            }
+            if (secondaryFilter && secondaryFilter !== primaryFilter) {
+                secondaryFilter.classList.add('filter-secondary');
+            }
+            
+            // Otros filtros activos: terciarios
+            filterButtons.forEach(btn => {
+                if (btn !== primaryFilter && btn !== secondaryFilter && btn.classList.contains('active')) {
+                    btn.classList.add('filter-tertiary');
+                }
+            });
+        };
+
         filterButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const clickedFilter = (btn.getAttribute('data-filter') || '').trim().toLowerCase();
+            btn.addEventListener('click', function(e) {
+                const dataFilter = btn.getAttribute('data-filter');
+                const now = Date.now();
+                const isDoubleClick = (now - lastClickTime) < 300 && lastClickedBtn === btn;
+                lastClickTime = now;
+                lastClickedBtn = btn;
+
+                const clickedFilter = (dataFilter || '').trim().toLowerCase();
                 if (!clickedFilter) return;
 
+                // Detectar doble clic (funciona en móvil y escritorio)
+                // El doble clic ignora el estado de bloqueo
+                if (isDoubleClick && clickedFilter !== 'all') {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Resetear todos los filtros y dejar solo este
+                    filterButtons.forEach(b => {
+                        b.classList.remove('active');
+                        b.classList.remove('is-blocked');
+                        b.setAttribute('aria-pressed', 'false');
+                        b.setAttribute('aria-disabled', 'false');
+                    });
+                    btn.classList.add('active');
+                    btn.setAttribute('aria-pressed', 'true');
+                    btn.classList.remove('is-blocked');
+                    btn.setAttribute('aria-disabled', 'false');
+                    allButton?.classList.remove('active');
+                    allButton?.setAttribute('aria-pressed', 'false');
+                    
+                    // Establecer como filtro primario
+                    primaryFilter = btn;
+                    secondaryFilter = null;
+                    updateFilterHierarchy();
+                    applyFilters();
+                    lastClickTime = 0; // Resetear para evitar triple clicks
+                    lastClickedBtn = null;
+                    return;
+                }
+                // Click simple
                 if (clickedFilter === 'all') {
                     resetAll();
+                    primaryFilter = null;
+                    secondaryFilter = null;
+                    updateFilterHierarchy();
                 } else if (btn.classList.contains('active')) {
+                    // Si ya está activo, desactivarlo
                     btn.classList.remove('active');
                     btn.setAttribute('aria-pressed', 'false');
+                    
+                    // Si era el filtro primario, promover el secundario
+                    if (btn === primaryFilter) {
+                        primaryFilter = secondaryFilter;
+                        secondaryFilter = null;
+                    } else if (btn === secondaryFilter) {
+                        secondaryFilter = null;
+                    }
+                    
                     const anyActive = Array.from(filterButtons).some(b => b !== allButton && b.classList.contains('active'));
                     if (!anyActive) {
                         allButton?.classList.add('active');
                         allButton?.setAttribute('aria-pressed', 'true');
+                        primaryFilter = null;
+                        secondaryFilter = null;
                     }
+                    
+                    updateFilterHierarchy();
                 } else {
+                    // Si no está activo, agregarlo a la selección
+                    const currentGroup = btn.closest('.filter-group');
+                    
                     // Comprobar si seleccionar este botón activaría TODOS los del grupo
-                    const group = btn.closest('.filter-group');
-                    if (group) {
-                        const totalInGroup = group.querySelectorAll('.filter-btn').length;
-                        const activeInGroup = group.querySelectorAll('.filter-btn.active').length;
+                    if (currentGroup) {
+                        const totalInGroup = currentGroup.querySelectorAll('.filter-btn').length;
+                        const activeInGroup = currentGroup.querySelectorAll('.filter-btn.active').length;
 
                         if (activeInGroup >= totalInGroup - 1) {
                             // No permitir seleccionar todos los filtros de una fila
@@ -200,23 +283,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     allButton?.setAttribute('aria-pressed', 'false');
                     btn.classList.add('active');
                     btn.setAttribute('aria-pressed', 'true');
+                    
+                    // Establecer jerarquía: si no hay primario, este es; si hay primario, este es secundario
+                    if (!primaryFilter) {
+                        primaryFilter = btn;
+                    } else if (!secondaryFilter) {
+                        secondaryFilter = btn;
+                    }
+                    
+                    updateFilterHierarchy();
+                    
+                    // Aplicar filtros para recalcular bloqueos basado en TODAS las selecciones activas
+                    applyFilters();
+                    // Volver a actualizar jerarquía después de que se recalculen los bloqueos
+                    updateFilterHierarchy();
+                    return;
                 }
 
-                applyFilters();
-            });
-
-            btn.addEventListener('dblclick', () => {
-                const clickedFilter = (btn.getAttribute('data-filter') || '').trim().toLowerCase();
-                if (!clickedFilter || clickedFilter === 'all') return;
-                
-                filterButtons.forEach(b => {
-                    b.classList.remove('active');
-                    b.setAttribute('aria-pressed', 'false');
-                });
-                btn.classList.add('active');
-                btn.setAttribute('aria-pressed', 'true');
-                allButton?.classList.remove('active');
-                allButton?.setAttribute('aria-pressed', 'false');
                 applyFilters();
             });
         });

@@ -77,7 +77,22 @@
 
     <section class="container" style="padding-bottom: var(--section-padding); margin-top: 4rem;">
       <!-- Filters -->
-      <div class="filter-nav">
+      <div class="filter-note">
+  <button class="filter-note-toggle" aria-expanded="false">Notas: Cómo usar los filtros ▾</button>
+  <div class="filter-note-content" hidden>
+    <ul>
+      <li><strong>All</strong> reinicia la selección y exporta toda la base.</li>
+      <li>Haga clic en un botón para marcarlo como primer filtro (tono primario).</li>
+      <li>Haga clic en otro botón de la misma fila u otra para añadir a la selección (acota la búsqueda).</li>
+      <li>No puede seleccionarse todos los botones de la misma fila.</li>
+      <li>El segundo filtro seleccionado tiene un tono diferente (tono secundario).</li>
+      <li>Doble clic rápido en un botón lo convierte en primer filtro (resetea las otras selecciones).</li>
+      <li>Cuando tenga la selección deseada, pulse <strong>CSV</strong> o <strong>PDF</strong> para descargarla.</li>
+    </ul>
+  </div>
+</div>
+
+        <div class="filter-nav">
         <div class="filter-sidebar">
           <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
           <button class="export-csv-btn" id="exportCsvBtn" title="Descargar selección actual en CSV">
@@ -804,10 +819,10 @@
         <h3>Vista Previa de Exportación</h3>
         <div class="export-actions">
           <button id="downloadCsvBtn" class="btn-magnetic" style="background: #10b981;">
-            <i class="fas fa-file-csv"></i> Descargar CSV
+            <i class="fas fa-file-csv"></i> CSV
           </button>
           <button id="downloadPdfBtn" class="btn-magnetic" style="background: #ef4444;">
-            <i class="fas fa-file-pdf"></i> Descargar PDF
+            <i class="fas fa-file-pdf"></i> PDF
           </button>
         </div>
         <button id="closePreviewModal" class="modal-close">&times;</button>
@@ -858,6 +873,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
   <script src="js/global.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/filter-responsive.js"></script>
+  <script src="js/filter-note-toggle.js"></script>
 </body>
 
 </html>
