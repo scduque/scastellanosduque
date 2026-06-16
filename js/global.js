@@ -498,6 +498,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 row.date, row.tag, row.lang, row.topic, row.media, row.format, 
                 row.title, row.subtitle, row.why
             ]);
+            
+            // Almacenar URLs por fila para agregarlas como enlaces en la columna Title
+            const urlsByRow = data.map(row => row.url && row.url !== '#' ? row.url : null);
 
             doc.autoTable({
                 head: tableHeaders,
@@ -507,9 +510,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 styles: { fontSize: 8, cellPadding: 2, overflow: 'linebreak' },
                 headStyles: { fillColor: [59, 130, 246] }, // Color accent (#3b82f6)
                 columnStyles: {
-                    6: { cellWidth: 50 }, // Title más ancho
-                    7: { cellWidth: 60 }, // Subtitle más ancho
-                    8: { cellWidth: 60 }  // Why más ancho
+                    6: { cellWidth: 50, textColor: [41, 128, 185] }, // Title: azul para parecer enlace
+                    7: { cellWidth: 60 }, // Subtitle
+                    8: { cellWidth: 60 }  // Why
+                },
+                didDrawCell: (data) => {
+                    // Agregar enlace clickable en la columna Title (índice 6)
+                    if (data.column.index === 6 && data.section === 'body' && urlsByRow[data.row.index]) {
+                        const url = urlsByRow[data.row.index];
+                        const cellX = data.cell.x;
+                        const cellY = data.cell.y;
+                        const cellWidth = data.cell.width;
+                        const cellHeight = data.cell.height;
+                        
+                        // Crear un área rectangular clicable que apunte a la URL
+                        doc.link(cellX, cellY, cellWidth, cellHeight, { pageNumber: doc.internal.pages.length, url: url });
+                    }
                 }
             });
 
