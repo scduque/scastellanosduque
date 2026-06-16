@@ -234,9 +234,22 @@ section {
 /* Press Specific Styles */
 .filter-nav {
   display: flex;
-  gap: 0.75rem;
+  gap: clamp(1rem, 5vw, 3rem);
   margin-bottom: 4rem;
   flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.filter-sidebar {
+  flex: 0 0 auto;
+}
+
+.filter-main {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .filter-btn {
@@ -253,6 +266,30 @@ section {
   touch-action: manipulation;
 }
 
+.is-hidden {
+  display: none !important;
+}
+
+.is-blocked {
+  opacity: 0.25;
+  pointer-events: none;
+  border-style: dashed;
+  filter: grayscale(1);
+}
+
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem; /* Smaller gap within a group */
+  align-items: center;
+}
+
+.filter-label {
+  font-weight: 600;
+  color: var(--text-dim);
+  margin-right: 0.5rem;
+  white-space: nowrap; /* Prevent label from breaking */
+}
 .filter-btn.active, .filter-btn:hover {
   background: var(--text-main);
   color: var(--bg);
@@ -593,6 +630,48 @@ section {
   }
 }
 
+/* Ajustes para botones de exportación en móviles */
+@media (max-width: 768px) {
+  /* Ajustes para los botones de exportación dentro del cuerpo del modal */
+  .export-actions {
+    flex-direction: column; /* Apilar botones verticalmente */
+    gap: 0.75rem; /* Reducir el espacio para botones apilados */
+    justify-content: center; /* Centrar los botones apilados */
+    align-items: center; /* Centrar elementos horizontalmente cuando están apilados */
+  }
+
+  .export-actions .btn-magnetic {
+    width: 100%; /* Hacer que los botones ocupen todo el ancho */
+    max-width: 300px; /* Opcional: limitar el ancho máximo para pantallas muy anchas en vista móvil */
+    text-align: center; /* Centrar el texto dentro del botón */
+  }
+
+  /* Ajustes para los botones de exportación dentro del encabezado del modal */
+  .modal-header {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .modal-header .export-actions {
+    flex-direction: row; /* Colocar botones en fila horizontal */
+    width: 100%; /* Forzar salto de línea ocupando todo el ancho */
+    order: 3; /* Ubicar debajo del título y del botón de cerrar */
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0.5rem;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-header .export-actions .btn-magnetic {
+    flex: 1; /* Distribuir espacio equitativamente */
+    max-width: 180px; /* Limitar el ancho máximo de cada botón */
+    padding: 0.6rem 1rem; /* Ajustar el relleno */
+    font-size: 0.8rem; /* Ajustar el tamaño de fuente */
+  }
+}
+
 @media (max-width: 768px) {
   section {
     /* Much more generous perimeter margin for 2026 */
@@ -900,5 +979,346 @@ body.menu-open .menu-content {
   }
   .menu-content a {
     font-size: clamp(2rem, 8vw, 3.5rem);
+  }
+}
+
+/* ==========================================
+   Estilo para el botón de exportación CSV
+   ========================================== */
+.export-csv-btn {
+    background-color: rgba(59, 130, 246, 0.1);
+    border: 1px solid var(--accent); /* Asegura que el borde sea visible */
+    border-radius: 4px; /* Opcional: suaviza las esquinas */
+    color: var(--accent);
+    font-weight: 600;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem; /* Añade espacio interno para que no se vea aplastado */
+    display: block;
+    width: 100%; /* Hace que el botón ocupe el ancho de su contenedor (útil en móviles) */
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.export-csv-btn:hover {
+    background-color: var(--accent);
+    color: #ffffff;
+}
+
+/* Modal Styles */
+.modal, .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.modal-content {
+    background: var(--bg-secondary);
+    width: 100%;
+    max-width: 1100px;
+    max-height: 85vh;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-modal, .modal-close {
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    font-size: 2.5rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-body {
+    padding: 2rem;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.modal-footer {
+    padding: 1.5rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.export-actions {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: flex-end;
+}
+
+.modal-header .export-actions {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: 1.5rem;
+    gap: 0.75rem;
+}
+
+.modal-header .btn-magnetic {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.85rem;
+    min-height: auto;
+}
+
+.modal-header .btn-magnetic i {
+    font-size: 1.1em;
+    margin-right: 6px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) rgba(255, 255, 255, 0.05);
+}
+
+/* Estilo personalizado para la barra de desplazamiento horizontal */
+.table-responsive::-webkit-scrollbar {
+    height: 8px;
+}
+.table-responsive::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+.table-responsive::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 4px;
+}
+
+#previewTableContainer table {
+    width: max-content;
+    min-width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+#previewTableContainer th, #previewTableContainer td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: left;
+    white-space: nowrap;
+    vertical-align: top;
+}
+
+/* Column specific wrapping and width limits for better readability */
+#previewTableContainer td:nth-child(5),
+#previewTableContainer td:nth-child(6), 
+#previewTableContainer td:nth-child(7),
+#previewTableContainer th:nth-child(5),
+#previewTableContainer th:nth-child(6),
+#previewTableContainer th:nth-child(7) {
+    white-space: normal;
+    max-width: 320px;
+    min-width: 220px;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--accent);
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    z-index: 3500; /* Aumentado para asegurar que esté siempre encima */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    /* Transición completa para asegurar suavidad en todos los estados */
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease, background 0.3s ease, color 0.3s ease, bottom 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top:hover {
+    background: var(--text-main);
+    color: var(--bg);
+    transform: translateY(-5px); /* Pequeño salto al hacer hover */
+}
+
+#previewTableContainer th {
+    color: var(--accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+body.mini-footer-active .back-to-top {
+    bottom: 6rem;
+}
+
+/* Floating Mini Footer Styles */
+.mini-footer-floating {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  padding: 0.6rem 1.5rem;
+  z-index: 2900; /* Just below modal but above normal page elements */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: max-content;
+  max-width: 90%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(20px);
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mini-footer-floating.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.mini-footer-floating.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(40px);
+}
+
+.mini-footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2rem;
+}
+
+.mini-footer-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.mini-footer-separator {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.mini-footer-role {
+  color: var(--accent);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.mini-footer-center {
+  display: flex;
+  align-items: center;
+}
+
+.mini-footer-email {
+  color: rgba(255, 255, 255, 0.7) !important;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mini-footer-email:hover {
+  color: var(--accent) !important;
+}
+
+.mini-footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.mini-footer-connect {
+  background: var(--accent);
+  color: white !important;
+  border: none;
+  padding: 0.4rem 1.2rem;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.mini-footer-connect:hover {
+  background: white;
+  color: black !important;
+  transform: translateY(-2px);
+}
+
+/* Mobile responsive adjustments for mini-footer */
+@media (max-width: 768px) {
+  .mini-footer-floating {
+    width: calc(100% - 2rem);
+    max-width: 450px;
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+  }
+  
+  .mini-footer-container {
+    gap: 1rem;
+  }
+
+  .mini-footer-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+    font-size: 0.75rem;
+  }
+
+  .mini-footer-separator {
+    display: none;
+  }
+
+  .mini-footer-role {
+    font-size: 0.65rem;
+  }
+
+  .mini-footer-center {
+    display: none; /* Ocultar email en móviles para ahorrar espacio */
+  }
+
+  .mini-footer-connect {
+    padding: 0.25rem 0.6rem;
+    font-size: 0.6rem;
+    gap: 0.3rem;
   }
 }
