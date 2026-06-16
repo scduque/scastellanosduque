@@ -446,7 +446,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 3. Función de descarga CSV
         const triggerCsvDownload = (data) => {
-            const headers = ['Date', 'Tag', 'Lang', 'Topic', 'Media', 'Format', 'Title', 'Subtitle', 'Why'];
+            const headers = ['Date', 'Tag', 'Lang', 'Topic', 'Media', 'Format', 'Title', 'URL', 'Subtitle', 'Why'];
             const escapeCSV = (text) => {
                 if (text === null || text === undefined) return '""';
                 const str = String(text).replace(/"/g, '""');
@@ -456,15 +456,12 @@ document.addEventListener('DOMContentLoaded', () => {
             let csvContent = headers.map(escapeCSV).join(',') + '\n';
 
             data.forEach(row => {
-                // Fórmula HYPERLINK compatible con Excel/Google Sheets (usa coma como separador)
-                const hyperlinkedTitle = (row.url && row.url !== '#') 
-                    ? `=HYPERLINK("${row.url}", "${row.title.replace(/"/g, '""')}")` 
-                    : row.title;
-
                 const csvRow = [
                     escapeCSV(row.date), escapeCSV(row.tag), escapeCSV(row.lang),
                     escapeCSV(row.topic), escapeCSV(row.media), escapeCSV(row.format),
-                    escapeCSV(hyperlinkedTitle), escapeCSV(row.subtitle), escapeCSV(row.why)
+                    escapeCSV(row.title), 
+                    escapeCSV(row.url && row.url !== '#' ? row.url : ''),
+                    escapeCSV(row.subtitle), escapeCSV(row.why)
                 ];
                 csvContent += csvRow.join(',') + '\n';
             });
@@ -478,7 +475,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.removeChild(link);
         };
 
-        // 4. Función de descarga PDF
+                // 4. Función de descarga PDF
         const triggerPdfDownload = (data) => {
             if (typeof window.jspdf === 'undefined') {
                 alert('Error: La librería de PDF no se ha cargado correctamente.');
