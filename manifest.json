@@ -1,0 +1,21 @@
+{
+  "short_name": "SCD Portfolio",
+  "name": "Sebastián Castellanos Duque | Executive Portfolio",
+  "icons": [
+    {
+      "src": "images/avatar.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/avatar.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#0f1012",
+  "display": "standalone",
+  "theme_color": "#3b82f6",
+  "description": "Business and operations strategist at scale. Ecommerce expert. COO of ARCA WW and Partner at Rappi."
+}

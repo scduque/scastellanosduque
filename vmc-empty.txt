@@ -1,0 +1,3 @@
+This is a placeholder Verified Mark Certificate (VMC) for BIMI verification.
+It serves as a temporary file to fulfill form requirements in platforms like Zoho Mail.
+This file does not represent an official VMC issued by a certification authority.

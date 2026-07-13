@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html class="theme-dark" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Press & Media | Sebastián Castellanos Duque</title>
+  <link rel="icon" type="image/png" href="images/avatar.png">
+  <meta name="description"
+    content="Media coverage of projects led by Sebastián Castellanos Duque: ARCA, collaborations in art, design, and business strategy.">
+  <link rel="canonical" href="https://scastellanosduque.com/prensa.html">
+
+  <!-- Open Graph / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://scastellanosduque.com/prensa.html">
+  <meta property="og:title" content="Press & Media | Sebastián Castellanos Duque">
+  <meta property="og:description"
+    content="Media coverage of projects led by Sebastián Castellanos Duque: ARCA, collaborations in art, design, and business strategy.">
+  <meta property="og:image" content="https://scastellanosduque.com/images/avatar.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Web App & SEO Enhancements -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0f1012">
+  <meta name="msapplication-config" content="browserconfig.xml">
+  <link rel="apple-touch-icon" href="images/avatar.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-barba="wrapper">
+  <div class="loader">
+    <h2>Loading<span>.</span></h2>
+  </div>
+
+  <nav class="main-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand-link">
+        <img src="images/avatar.png" alt="Sebastián Castellanos Duque - Professional Profile Home"
+          class="nav-avatar-mini" decoding="async">
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <span class="menu-icon"></span>
+        <span class="menu-icon"></span>
+        <span class="menu-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="menu-content" id="menuContent">
+    <button class="menu-close" id="menuClose" aria-label="Close menu">&times;</button>
+    <a href="index.html#profile">Profile</a>
+    <a href="index.html#experience">Career</a>
+    <a href="prensa.html">Press</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <main data-barba="container" data-barba-namespace="prensa">
+    <section class="hero container" style="padding-top: clamp(8rem, 15vh, 12rem);">
+      <h1 class="hero-title">Press <br>Archive</h1>
+      <div class="hero-subtitle">
+        <p>Strategic analysis and media coverage of operational milestones, regional expansions and creative
+          collaborations in technology, logistics and high-end design.</p>
+        <p>Sebastián Castellanos Duque. COO of <span translate="no">ARCA WW</span> | Partner at <span
+            translate="no">Rappi</span> | Ecommerce and Operations at Scale Strategist.</p>
+      </div>
+      <img src="images/portada.jpeg" alt="Press archive and media coverage summary of Sebastián Castellanos Duque"
+        class="press-cover" decoding="async">
+    </section>
+
+    <section class="container" style="padding-bottom: var(--section-padding); margin-top: 4rem;">
+      <!-- Filters -->
+      <div class="filter-note" style="margin-left: auto; margin-right: auto; max-width: 600px;">
+        <button class="filter-note-toggle" aria-expanded="false">How to use these filters? ▾</button>
+        <div class="filter-note-content" hidden>
+          <ul>
+            <li><strong>All</strong> resets the selection and exports the entire database.</li>
+            <li>Click a button to mark it as the first filter (primary tone).</li>
+            <li>Click another button in the same row or a different row to add to the selection (narrows the search).
+            </li>
+            <li>You cannot select all the buttons in the same row.</li>
+            <li>The second selected filter has a different tone (secondary tone).</li>
+            <li>Quickly double-clicking a button makes it the first filter (resets the other selections).</li>
+            <li>When you have the desired selection, press <strong>CSV</strong> or <strong>PDF</strong> to download it.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="filter-nav">
+        <div class="filter-sidebar">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+          <button class="export-csv-btn" id="exportCsvBtn" title="Descargar selección actual en CSV">
+            <i class="fas fa-file-csv"></i> Export
+          </button>
+        </div>
+
+        <div class="filter-main">
+          <div class="filter-group">
+            <span class="filter-label">By Format:</span>
+            <button class="filter-btn" data-filter="article" aria-pressed="false">Article</button>
+            <button class="filter-btn" data-filter="interview" aria-pressed="false">Interview</button>
+            <button class="filter-btn" data-filter="press-note" aria-pressed="false">Press Note</button>
+            <button class="filter-btn" data-filter="case-study" aria-pressed="false">Case Study</button>
+          </div>
+
+          <div class="filter-group">
+            <span class="filter-label">By Year:</span>
+            <button class="filter-btn" data-filter="2026" aria-pressed="false">2026</button>
+            <button class="filter-btn" data-filter="2025" aria-pressed="false">2025</button>
+            <button class="filter-btn" data-filter="2024" aria-pressed="false">2024</button>
+            <button class="filter-btn" data-filter="2023" aria-pressed="false">2023</button>
+            <button class="filter-btn" data-filter="2022" aria-pressed="false">2022</button>
+            <button class="filter-btn" data-filter="2021" aria-pressed="false">2021</button>
+            <button class="filter-btn" data-filter="2011" aria-pressed="false">2011</button>
+          </div>
+
+          <div class="filter-group">
+            <span class="filter-label">By Original Language:</span>
+            <button class="filter-btn" data-filter="english" aria-pressed="false">English</button>
+            <button class="filter-btn" data-filter="spanish" aria-pressed="false">Spanish</button>
+            <button class="filter-btn" data-filter="french" aria-pressed="false">French</button>
+          </div>
+
+          <div class="filter-group">
+            <span class="filter-label">By Topic:</span>
+            <button class="filter-btn" data-filter="commerce" aria-pressed="false">Commerce</button>
+            <button class="filter-btn" data-filter="fintech" aria-pressed="false">Fintech</button>
+            <button class="filter-btn" data-filter="art-design" aria-pressed="false">Art & Design</button>
+            <button class="filter-btn" data-filter="logistics-ops" aria-pressed="false">Logistics & Operations</button>
+          </div>
+
+          <div class="filter-group">
+            <span class="filter-label">By Tag:</span>
+            <button class="filter-btn" data-filter="author" aria-pressed="false">Author</button>
+            <button class="filter-btn" data-filter="mention" aria-pressed="false">Mention</button>
+            <button class="filter-btn" data-filter="about-work" aria-pressed="false">About my work</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Press List -->
+      <div class="press-list">
+        <a href="https://www.globaltechreporter.com/article/920702075-del-garaje-a-la-bolsa-la-arquitectura-operativa-que-define-el-xito-del-e-commerce"
+          target="_blank" class="work-item press-row"
+          data-category="article 2026 author commerce spanish"
+          data-media="Global Tech Reporter" data-date="July 13, 2026" data-lang="Spanish"
+          data-topic="Commerce" data-tag="Author" data-format="Article"
+          data-title='"From Garage to the Stock Market: The Operational Architecture That Defines E-commerce Success"'
+          data-subtitle="An analysis of the operational frameworks, execution discipline, and scalable systems behind successful e-commerce growth."
+          data-why="This article examines how operational architecture shapes e-commerce outcomes, reinforcing a strategic perspective centered on execution, scalability, and growth."
+          data-url="https://www.globaltechreporter.com/article/920702075-del-garaje-a-la-bolsa-la-arquitectura-operativa-que-define-el-xito-del-e-commerce"
+          rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">Global Tech Reporter</span> <span>July 13, 2026</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: Spanish</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: Commerce</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>Author
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"From Garage to the Stock Market: The Operational Architecture That Defines E-commerce Success" —
+              <small>An analysis of the operational frameworks, execution discipline, and scalable systems behind successful e-commerce growth.</small>
+            </h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> This article examines how operational architecture shapes e-commerce outcomes, reinforcing a strategic perspective centered on execution, scalability, and growth.</p>
+          </div>
+          <span class="category-tag">Article</span>
+        </a>
+
+        <a href="https://entrepreneurloop.com/ai-tools-for-ecommerce/" target="_blank" class="work-item press-row"
+          data-category="arca-ww article 2026 mention e-commerce english" data-media="Entrepreneur Loop"
+          data-date="June 30, 2026" data-lang="English" data-topic="E-commerce" data-tag="Mention" data-format="Article"
+          data-title='"15 AI Tools for E-commerce Businesses to Boost Sales in 2026"'
+          data-subtitle="Analysis of the top artificial intelligence platforms shaping the future of digital retail and sales optimization in 2026."
+          data-why="This article features my insights on integrating AI tools within e-commerce operations, validating my approach to tech-driven logistics and automated scaling."
+          data-url="https://entrepreneurloop.com/ai-tools-for-ecommerce/" rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">Entrepreneur Loop</span> <span>June 30, 2026</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: English</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: E-commerce</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>Mention
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"15 AI Tools for E-commerce Businesses to Boost Sales in 2026" —
+              <small>Analysis of the top artificial intelligence platforms shaping the future of digital retail and
+                sales optimization in 2026.</small>
+            </h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> This article features my insights on
+              integrating AI tools within e-commerce operations, validating my approach to tech-driven logistics and
+              automated scaling.</p>
+          </div>
+          <span class="category-tag">Article</span>
+        </a>
+
+        <a href="https://natlawreview.com/press-releases/fomo-trap-live-shopping-e-commerce-why-mega-event-impulse-buys-are"
+          target="_blank" class="work-item press-row"
+          data-category="arca-ww article 2026 author e-commerce logistics-ops english"
+          data-media="The National Law Review" data-date="June 18, 2026" data-lang="English" data-topic="E-commerce"
+          data-tag="Author" data-format="Article"
+          data-title='"The FOMO Trap in Live Shopping E-Commerce: Why Mega-Event Impulse Buys Are an Operational Liability"'
+          data-subtitle="Analysis of regulatory, consumer protection, and logistical risks associated with impulse-driven live shopping sales campaigns."
+          data-why="This article details the corporate and operational risks of high-intensity shopping events, emphasizing the need for robust compliance and scale-ready fulfillment architectures."
+          data-url="https://natlawreview.com/press-releases/fomo-trap-live-shopping-e-commerce-why-mega-event-impulse-buys-are"
+          rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">The National Law Review</span> <span>June 18, 2026</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: English</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: E-commerce</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>Author
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"The FOMO Trap in Live Shopping E-Commerce: Why Mega-Event Impulse Buys Are an
+              Operational Liability" —
+              <small>Analysis of regulatory, consumer protection, and logistical risks associated with impulse-driven
+                live shopping sales campaigns.</small>
+            </h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> This article details the corporate and
+              operational risks of high-intensity shopping events, emphasizing the need for robust compliance and
+              scale-ready fulfillment architectures.</p>
+          </div>
+          <span class="category-tag">Article</span>
+        </a>
+
+        <a href="https://marketing.einnews.com/pr_news/919181361/the-fomo-trap-in-live-shopping-e-commerce-why-mega-event-impulse-buys-are-an-operational-liability"
+          target="_blank" class="work-item press-row"
+          data-category="arca-ww article 2026 author e-commerce logistics-ops english" data-media="EIN News Marketing"
+          data-date="June 12, 2026" data-lang="English" data-topic="E-commerce" data-tag="Author" data-format="Article"
+          data-title='"The FOMO Trap in Live Shopping E-Commerce: Why Mega-Event Impulse Buys Are an Operational Liability"'
+          data-subtitle="Examining the post-purchase logistics strain and high return rates triggered by impulse buying during live shopping events."
+          data-why="This piece explores the operational liabilities of live commerce events, showcasing my expertise in designing resilient returns management and capacity planning systems to handle sudden demand spikes."
+          data-url="https://marketing.einnews.com/pr_news/919181361/the-fomo-trap-in-live-shopping-e-commerce-why-mega-event-impulse-buys-are-an-operational-liability"
+          rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">EIN News Marketing</span> <span>June 12, 2026</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: English</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: E-commerce</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>Author
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"The FOMO Trap in Live Shopping E-Commerce: Why Mega-Event Impulse Buys Are an
+              Operational Liability" —
+              <small>Examining the post-purchase logistics strain and high return rates triggered by impulse buying
+                during live shopping events.</small>
+            </h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> This piece explores the operational
+              liabilities of live commerce events, showcasing my expertise in designing resilient returns management and
+              capacity planning systems to handle sudden demand spikes.</p>
+          </div>
+          <span class="category-tag">Article</span>
+        </a>
+
+        <a href="https://cbherald.com/beyond-the-algorithm-the-1-3-trillion-logistics-gap-in-social-commerce/"
+          target="_blank" class="work-item press-row"
+          data-category="arca-ww article 2026 author social-commerce logistics-ops english" data-media="CB Herald"
+          data-date="June 12, 2026" data-lang="English" data-topic="Social Commerce" data-tag="Author"
+          data-format="Article" data-title='"Beyond the Algorithm: The $1.3 Trillion Logistics Gap in Social Commerce"'
+          data-subtitle="Exploring why strategic nearshoring is essential to align viral demand with supply chain capabilities and unlock the potential of social commerce."
+          data-why="This article highlights the $1.3 trillion logistics gap in social commerce, detailing my strategic emphasis on nearshoring to turn algorithmic volatility into a predictable, high-performing fulfillment engine."
+          data-url="https://cbherald.com/beyond-the-algorithm-the-1-3-trillion-logistics-gap-in-social-commerce/"
+          rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">CB Herald</span> <span>June 12, 2026</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: English</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: Social Commerce</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>Author
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"Beyond the Algorithm: The $1.3 Trillion Logistics Gap in Social Commerce" —
+              <small>Exploring why strategic nearshoring is essential to align viral demand with supply chain
+                capabilities and unlock the potential of social commerce.</small>
+            </h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> This article highlights the $1.3 trillion
+              logistics gap in social commerce, detailing my strategic emphasis on nearshoring to turn algorithmic
+              volatility into a predictable, high-performing fulfillment engine.</p>
+          </div>
+          <span class="category-tag">Article</span>
+        </a>
+
+        <a href="https://www.transportationworldonline.com/article/918141855-the-social-commerce-operational-gap-logistics-as-the-2026-profitability-bottleneck"
+          target="_blank" class="work-item press-row"
+          data-category="arca-ww article 2026 author social-commerce logistics-ops english"
+          data-media="Transportation World Online" data-date="June 09, 2026" data-lang="English"
+          data-topic="Logistics & Operations" data-tag="Author" data-format="Article"
+          data-title='"The Social Commerce Operational Gap: Logistics As The 2026 Profitability Bottleneck"'
+          data-subtitle="An in-depth look at how logistics and fulfillment networks represent the primary strategic hurdles for social commerce scaling."
+          data-why="As a logistics and ecommerce strategist, this article highlights the exact execution barriers I address: transforming fulfillment from an operational bottleneck into a driver of bottom-line efficiency."
+          data-url="https://www.transportationworldonline.com/article/918141855-the-social-commerce-operational-gap-logistics-as-the-2026-profitability-bottleneck"
+          rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">Transportation World Online</span> <span>June 09, 2026</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: English</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: Logistics & Operations</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>Author
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"The Social Commerce Operational Gap: Logistics As The 2026 Profitability
+              Bottleneck" —
+              <small>An in-depth look at how logistics and fulfillment networks represent the primary strategic hurdles
+                for social commerce scaling.</small>
+            </h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> As a logistics and ecommerce strategist, this
+              article highlights the exact execution barriers I address: transforming fulfillment from an operational
+              bottleneck into a driver of bottom-line efficiency.</p>
+          </div>
+          <span class="category-tag">Article</span>
+        </a>
+
+        <a href="https://menafn.com/1111230358/The-Social-Commerce-Operational-Gap-Logistics-As-The-2026-Profitability-Bottleneck"
+          target="_blank" class="work-item press-row"
+          data-category="arca-ww article 2026 author social-commerce logistics-ops english" data-media="MENAFN"
+          data-date="June 09, 2026" data-lang="English" data-topic="Social Commerce" data-tag="Author"
+          data-format="Article"
+          data-title='"The Social Commerce Operational Gap: Logistics As The 2026 Profitability Bottleneck"'
+          data-subtitle="Analysis of the supply chain challenges and delivery bottlenecks impacting the profitability of social commerce platforms in 2026."
+          data-why="This analysis addresses the critical intersection of social commerce and logistics operations, directly aligning with my focus on scaling supply chain infrastructures to resolve profitability bottlenecks."
+          data-url="https://menafn.com/1111230358/The-Social-Commerce-Operational-Gap-Logistics-As-The-2026-Profitability-Bottleneck"
+          rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">MENAFN</span> <span>June 09, 2026</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: English</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: Social Commerce</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>Author
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"The Social Commerce Operational Gap: Logistics As The 2026 Profitability
+              Bottleneck" —
+              <small>Analysis of the supply chain challenges and delivery bottlenecks impacting the profitability of
+                social commerce platforms in 2026.</small>
+            </h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> This analysis addresses the critical
+              intersection of social commerce and logistics operations, directly aligning with my focus on scaling
+              supply chain infrastructures to resolve profitability bottlenecks.</p>
+          </div>
+          <span class="category-tag">Article</span>
+        </a>
+
+        <a href="https://www.bloomberglinea.com/negocios/de-rappi-a-uala-los-gigantes-tecnologicos-en-latinoamerica-que-atraen-la-inversion-segun-endeavor/"
+          target="_blank" class="work-item press-row" data-category="rappi press-note 2026 about-work fintech spanish"
+          data-media="Bloomberg Línea" data-date="April 08, 2026" data-lang="Spanish" data-topic="Fintech"
+          data-tag="About my work" data-format="Press Note"
+          data-title='"From Rappi to Ualá: The tech giants in Latin America attracting investment"'
+          data-subtitle="Endeavor report on the regional companies driving the technology and investment ecosystem."
+          data-why="This report highlights Rappi as a regional benchmark for attracting investment. My participation in the scaling and operational foundation of the company validates my expertise in building high-growth models that capture the interest of global investment funds."
+          data-url="https://www.bloomberglinea.com/negocios/de-rappi-a-uala-los-gigantes-tecnologicos-en-latinoamerica-que-atraen-la-inversion-segun-endeavor/"
+          rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">Bloomberg Línea</span> <span>April 08, 2026</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: Spanish</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: Fintech</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>About my work
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"From Rappi to Ualá: The tech giants in Latin America attracting investment" —
+              <small>Endeavor report on the regional companies driving the technology and investment ecosystem.</small>
+            </h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> This report highlights Rappi as a regional
+              benchmark for attracting investment. My participation in the scaling and operational foundation of the
+              company validates my expertise in building high-growth models that capture the interest of global
+              investment funds.</p>
+          </div>
+          <span class="category-tag press-note">Press Note</span>
+        </a>
+
+        <a href="https://revistaempresarial.com/marketing/redes-sociales/colombia-y-mexico-impulsan-un-mercado-de-14-mil-millones-usd-en-social-commerce/"
+          target="_blank" class="work-item press-row"
+          data-category="arca-ww interview 2026 mention social-commerce spanish" data-media="Revista Empresarial"
+          data-date="February 25, 2026" data-lang="Spanish" data-topic="Social Commerce" data-tag="Mention"
+          data-format="Interview" data-title='"Mexico and Colombia drive a 14 billion USD social commerce market"'
+          data-subtitle="Analysis of social commerce growth in Latin America."
+          data-why="I've actively collaborated in defining operational strategies for this USD 14 billion emerging market. It positions me as a voice that understands and anticipates digital trends in the region."
+          data-url="https://revistaempresarial.com/marketing/redes-sociales/colombia-y-mexico-impulsan-un-mercado-de-14-mil-millones-usd-en-social-commerce/"
+          rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">Revista Empresarial</span> <span>February 25, 2026</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: Spanish</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: Social Commerce</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>Mention
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"Mexico and Colombia drive a 14 billion USD social commerce market" —
+              <small>Analysis of social commerce growth in Latin America.</small>
+            </h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> I've actively collaborated in defining
+              operational strategies for this USD 14 billion emerging market. It positions me as a voice that
+              understands and anticipates digital trends in the region.</p>
+          </div>
+          <span class="category-tag">Interview</span>
+        </a>
+
+        <a href="https://www.researchandmarkets.com/reports/6215999/latin-america-digital-commerce-and-payments-in-the"
+          target="_blank" class="work-item press-row" data-category="rappi case-study 2026 about-work fintech english"
+          data-media="Research and Markets" data-date="January 12, 2026" data-lang="English" data-topic="Fintech"
+          data-tag="About my work" data-format="Case Study"
+          data-title='"Latin America Digital Commerce and Payments Forecast"'
+          data-subtitle="Comprehensive analysis of digital transactions and market trends in the LatAm region."
+          data-why="This report validates the strategic direction of the fintech and ecommerce integrations I've led. Understanding payment ecosystems is crucial for scaling Super Apps and ensuring operational profitability in emerging markets."
+          data-url="https://www.researchandmarkets.com/reports/6215999/latin-america-digital-commerce-and-payments-in-the"
+          rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">Research and Markets</span> <span>January 12, 2026</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: English</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: Fintech</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>About my work
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"Latin America Digital Commerce and Payments Forecast" — <small>Comprehensive
+                analysis of digital transactions and market trends in the LatAm region.</small></h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> This report validates the strategic direction
+              of the fintech and ecommerce integrations I've led. Understanding payment ecosystems is crucial for
+              scaling Super Apps and ensuring operational profitability in emerging markets.</p>
+          </div>
+          <span class="category-tag">Case Study</span>
+        </a>
+
+        <a href="https://expansion.mx/opinion/2025/12/23/el-verdadero-reto-del-e-commerce-en-mexico-no-es-vender"
+          target="_blank" class="work-item press-row" data-category="rappi article 2025 author e-commerce spanish"
+          data-media="Expansión.mx" data-date="December 23, 2025" data-lang="Spanish" data-topic="E-commerce"
+          data-tag="Author" data-format="Article" data-title='"The true challenge of ecommerce is not selling"'
+          data-subtitle="Analysis of structural operational challenges of ecommerce in Mexico."
+          data-why="In this article, I break down the structural challenges of ecommerce in Mexico. My focus is to demonstrate that success is not in the initial sale, but in the flawless execution of every stage of the customer journey."
+          data-url="https://expansion.mx/opinion/2025/12/23/el-verdadero-reto-del-e-commerce-en-mexico-no-es-vender"
+          rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">Expansión.mx</span> <span>December 23, 2025</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: Spanish</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: E-commerce</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>Author
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"The true challenge of ecommerce is not selling" — <small>Analysis of structural
+                operational challenges of ecommerce in Mexico.</small></h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> In this article, I break down the structural
+              challenges of ecommerce in Mexico. My focus is to demonstrate that success is not in the initial sale, but
+              in the flawless execution of every stage of the customer journey.</p>
+          </div>
+          <span class="category-tag">Article</span>
+        </a>
+
+        <a href="https://www.razon.com.mx/negocios/2025/11/18/impulsa-social-commerce-a-las-pymes-mexicanas/"
+          target="_blank" class="work-item press-row"
+          data-category="rappi interview 2025 mention social-commerce spanish" data-media="La Razón"
+          data-date="November 18, 2025" data-lang="Spanish" data-topic="Social Commerce" data-tag="Mention"
+          data-format="Interview" data-title='"Social Commerce boosts Mexican SMEs"'
+          data-subtitle="Analysis of the impact of social commerce platforms on the growth and digitalization of small and medium-sized enterprises in Mexico."
+          data-why="This article validates the strategic importance of the social commerce models I've helped implement. It highlights how technology can democratize access to digital markets, a vision I lead by optimizing the last-mile and user experience for emerging businesses."
+          data-url="https://www.razon.com.mx/negocios/2025/11/18/impulsa-social-commerce-a-las-pymes-mexicanas/"
+          rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">La Razón</span> <span>November 18, 2025</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: Spanish</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: Social Commerce</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>Mention
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"Social Commerce boosts Mexican SMEs" — <small>Analysis of the impact of social
+                commerce platforms on the growth and digitalization of small and medium-sized enterprises in
+                Mexico.</small></h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> This article validates the strategic
+              importance of the social commerce models I've helped implement. It highlights how technology can
+              democratize access to digital markets, a vision I lead by optimizing the last-mile and user experience for
+              emerging businesses.</p>
+          </div>
+          <span class="category-tag">Interview</span>
+        </a>
+
+        <a href="https://expansion.mx/opinion/2025/11/14/cuando-la-confianza-se-convierte-en-la-moneda-del-nuevo-consumo-latinoamericano"
+          target="_blank" class="work-item press-row" data-category="rappi article 2025 author e-commerce spanish"
+          data-media="Expansión.mx" data-date="November 14, 2025" data-lang="Spanish" data-topic="E-commerce"
+          data-tag="Author" data-format="Article"
+          data-title='"When trust becomes the currency of the new Latin American consumption"'
+          data-subtitle="Analysis on the evolution of consumer trust and its impact on regional digital markets."
+          data-why="In this column, I explore how trust is no longer a soft variable but the fundamental asset for scaling digital businesses in Latin America. My focus is on how transparency and operational consistency build long-term value."
+          data-url="https://expansion.mx/opinion/2025/11/14/cuando-la-confianza-se-convierte-en-la-moneda-del-nuevo-consumo-latinoamericano"
+          rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">Expansión.mx</span> <span>November 14, 2025</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: Spanish</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: E-commerce</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>Author
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"When trust becomes the currency of the new Latin American consumption" —
+              <small>Analysis on the evolution of consumer trust and its impact on regional digital markets.</small>
+            </h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> In this column, I explore how trust is no
+              longer a soft variable but the fundamental asset for scaling digital businesses in Latin America. My focus
+              is on how transparency and operational consistency build long-term value.</p>
+          </div>
+          <span class="category-tag">Article</span>
+        </a>
+
+        <a href="https://www.bloomberg.com/news/articles/2025-09-08/amazon-buys-stake-in-latin-american-delivery-startup-rappi"
+          target="_blank" class="work-item press-row" data-category="rappi press-note 2025 about-work fintech english"
+          data-media="Bloomberg" data-date="September 08, 2025" data-lang="English" data-topic="Fintech"
+          data-tag="About my work" data-format="Press Note" data-title='"Amazon Buys Stake in Rappi"'
+          data-subtitle="Report on Amazon's strategic acquisition to strengthen last-mile logistics in Latin America."
+          data-why="This milestone highlights my experience scaling operations that capture the interest of global giants like Amazon. It reflects my ability to manage high-profile transactions and generate strategic value in emerging markets."
+          data-url="https://www.bloomberg.com/news/articles/2025-09-08/amazon-buys-stake-in-latin-american-delivery-startup-rappi"
+          rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">Bloomberg</span> <span>September 08, 2025</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: English</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: Fintech</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>About my work
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"Amazon Buys Stake in Rappi" — <small>Report on Amazon's strategic acquisition to
+                strengthen last-mile logistics in Latin America.</small></h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> This milestone highlights my experience
+              scaling operations that capture the interest of global giants like Amazon. It reflects my ability to
+              manage high-profile transactions and generate strategic value in emerging markets.</p>
+          </div>
+          <span class="category-tag press-note">Press Note</span>
+        </a>
+
+        <a href="https://hdexpo.hospitalitydesign.com/blog/breaking-barriers-in-design-and-craftsmanship-arcas-vision-for-the-future/"
+          target="_blank" class="work-item press-row"
+          data-category="arca-ww press-note 2025 about-work art-design english" data-media="Hospitality Design"
+          data-date="April 22, 2025" data-lang="English" data-topic="ART & DESIGN" data-tag="About my work"
+          data-format="Press Note" data-title="ETERNA: Meyer Davis x ARCA"
+          data-subtitle="Furniture line presented at HD Expo Las Vegas focused on luxury hospitality."
+          data-why="This project reflects my ability to connect luxury materials with high-value commercial applications, managing everything from international artisanal production to large-format logistics."
+          data-url="https://hdexpo.hospitalitydesign.com/blog/breaking-barriers-in-design-and-craftsmanship-arcas-vision-for-the-future/"
+          rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">Hospitality Design</span> <span>April 22, 2025</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: English</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: ART & DESIGN</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>About my work
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">ETERNA: Meyer Davis x ARCA — <small>Furniture line presented at HD Expo Las Vegas
+                focused on luxury hospitality.</small></h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> This project reflects my ability to connect
+              luxury materials with high-value commercial applications, managing everything from international artisanal
+              production to large-format logistics.</p>
+          </div>
+          <span class="category-tag press-note">Press Note</span>
+        </a>
+
+        <a href="https://store.hbr.org/product/rappi-we-run-for-you/AN0177" target="_blank" class="work-item press-row"
+          data-category="rappi case-study 2024 about-work logistics-ops english" data-media="Harvard Business Review"
+          data-date="November 21, 2024" data-lang="English" data-topic="Logistics & Operations" data-tag="About my work"
+          data-format="Case Study" data-title='"Rappi: We Run for You (Case Study)"'
+          data-subtitle="Academic validation of the hyper-growth operating model in emerging markets."
+          data-why="I'm proud that Rappi is a Harvard case study. My role as Partner and Director of Expansion allowed me to be part of the team that designed and executed the scalability strategies that are analyzed academically today."
+          data-url="https://store.hbr.org/product/rappi-we-run-for-you/AN0177" rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">Harvard Business Review</span> <span>November 21, 2024</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: English</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: Logistics & Operations</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>About my work
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"Rappi: We Run for You (Case Study)" — <small>Academic validation of the
+                hyper-growth operating model in emerging markets.</small></h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> I'm proud that Rappi is a Harvard case study.
+              My role as Partner and Director of Expansion allowed me to be part of the team that designed and executed
+              the scalability strategies that are analyzed academically today.</p>
+          </div>
+          <span class="category-tag">Case Study</span>
+        </a>
+
+        <a href="https://www.bloomberg.com/news/features/2024-10-08/latin-america-startup-rappi-plans-5-billion-ipo-on-fast-delivery"
+          target="_blank" class="work-item press-row" data-category="rappi press-note 2024 about-work fintech english"
+          data-media="Bloomberg" data-date="October 08, 2024" data-lang="English" data-topic="Fintech"
+          data-tag="About my work" data-format="Press Note" data-title='"Rappi Plans $5 Billion IPO on Fast Delivery"'
+          data-subtitle="Bloomberg feature on the company's valuation and strategic path to the stock market."
+          data-why="This feature validates the operational scale and the hyper-growth model I helped build at Rappi. Bloomberg's analysis of our path to a $5B IPO highlights the strategic impact of the expansion and efficiency strategies I led across the region."
+          data-url="https://www.bloomberg.com/news/features/2024-10-08/latin-america-startup-rappi-plans-5-billion-ipo-on-fast-delivery"
+          rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">Bloomberg</span> <span>October 08, 2024</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: English</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: Fintech</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>About my work
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"Rappi Plans $5 Billion IPO on Fast Delivery" — <small>Bloomberg feature on the
+                company's valuation and strategic path to the stock market.</small></h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> This feature validates the operational scale
+              and the hyper-growth model I helped build at Rappi. Bloomberg's analysis of our path to a $5B IPO
+              highlights the strategic impact of the expansion and efficiency strategies I led across the region.</p>
+          </div>
+          <span class="category-tag press-note">Press Note</span>
+        </a>
+
+        <a href="https://www.americaeconomia.com/negocios-e-industrias/colombiana-rappi-invertira-mas-de-us-110-millones-en-mexico"
+          target="_blank" class="work-item press-row"
+          data-category="rappi press-note 2024 about-work logistics-ops spanish" data-media="América Economía"
+          data-date="March 27, 2024" data-lang="Spanish" data-topic="Logistics & Operations" data-tag="About my work"
+          data-format="Press Note" data-title='"Rappi will invest more than US$ 110 million in Mexico"'
+          data-subtitle="Strategic capital allocation to strengthen Turbo technology."
+          data-why="Here, my experience managing high-impact investments (>USD 110M) is contextualized. It reflects my ability to execute large-scale operations that drive regional growth."
+          data-url="https://www.americaeconomia.com/negocios-e-industrias/colombiana-rappi-invertira-mas-de-us-110-millones-en-mexico"
+          rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">América Economía</span> <span>March 27, 2024</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: Spanish</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: Logistics & Operations</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>About my work
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"Rappi will invest more than US$ 110 million in Mexico" — <small>Strategic capital
+                allocation to strengthen Turbo technology.</small></h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> Here, my experience managing high-impact
+              investments (>USD 110M) is contextualized. It reflects my ability to execute large-scale operations
+              that drive regional growth.</p>
+          </div>
+          <span class="category-tag press-note">Press Note</span>
+        </a>
+
+        <a href="https://www.wallpaper.com/design-interiors/vincent-van-duysen-stone-furniture-arca-miami"
+          target="_blank" class="work-item press-row"
+          data-category="arca-ww press-note 2023 about-work art-design english" data-media="Wallpaper*"
+          data-date="December 05, 2023" data-lang="English" data-topic="ART & DESIGN" data-tag="About my work"
+          data-format="Press Note" data-title='"Gravitas: Vincent Van Duysen x ARCA"'
+          data-subtitle="Tactile exploration of 18 pieces in Porphyry, Cafesina, Recinto, and Carrara Marble."
+          data-why="This coverage highlights my focus on operational excellence, coordinating European artisanal manufacturing and ensuring impeccable global distribution of unique pieces."
+          data-url="https://www.wallpaper.com/design-interiors/vincent-van-duysen-stone-furniture-arca-miami"
+          rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">Wallpaper*</span> <span>December 05, 2023</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: English</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: ART & DESIGN</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>About my work
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"Gravitas: Vincent Van Duysen x ARCA" — <small>Tactile exploration of 18 pieces in
+                Porphyry, Cafesina, Recinto, and Carrara Marble.</small></h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> This coverage highlights my focus on
+              operational excellence, coordinating European artisanal manufacturing and ensuring impeccable global
+              distribution of unique pieces.</p>
+          </div>
+          <span class="category-tag press-note">Press Note</span>
+        </a>
+
+        <a href="https://www.journal-du-design.fr/design/collection-nudo-splendeur-de-la-pierre-naturelle-154366/"
+          target="_blank" class="work-item press-row"
+          data-category="arca-ww press-note 2023 about-work art-design french" data-media="Journal du Design (France)"
+          data-date="April 07, 2023" data-lang="French" data-topic="ART & DESIGN" data-tag="About my work"
+          data-format="Press Note" data-title='"NUDO Collection: Kelly Wearstler x ARCA"'
+          data-subtitle="Tier 1 French media coverage on the fusion of craftsmanship and technology in marble."
+          data-why="This mention in an elite French medium validates my ability to lead luxury design collaborations with global projection, joining technical craftsmanship with a sophisticated commercial vision."
+          data-url="https://www.journal-du-design.fr/design/collection-nudo-splendeur-de-la-pierre-naturelle-154366/"
+          rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">Journal du Design (France)</span> <span>April 07, 2023</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: French</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: ART & DESIGN</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>About my work
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"NUDO Collection: Kelly Wearstler x ARCA" — <small>Tier 1 French media coverage on
+                the fusion of craftsmanship and technology in marble.</small></h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> This mention in an elite French medium
+              validates my ability to lead luxury design collaborations with global projection, joining technical
+              craftsmanship with a sophisticated commercial vision.</p>
+          </div>
+          <span class="category-tag press-note">Press Note</span>
+        </a>
+
+        <a href="https://americasmi.com/insights/rappi-evolving-business-model-impact-latam-logistics/" target="_blank"
+          class="work-item press-row" data-category="rappi press-note 2023 about-work logistics-ops english"
+          data-media="Americas MI" data-date="February 15, 2023" data-lang="English" data-topic="Logistics & Operations"
+          data-tag="About my work" data-format="Press Note" data-title='"Impact of Rappi on Latin American logistics"'
+          data-subtitle="Business model analysis on regional last-mile infrastructure."
+          data-why="This analysis allows me to share my vision on innovation and supply chain with an international audience, projecting the lessons learned by transforming logistics in the region."
+          data-url="https://americasmi.com/insights/rappi-evolving-business-model-impact-latam-logistics/"
+          rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">Americas MI</span> <span>February 15, 2023</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: English</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: Logistics & Operations</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>About my work
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"Impact of Rappi on Latin American logistics" — <small>Business model analysis on
+                regional last-mile infrastructure.</small></h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> This analysis allows me to share my vision on
+              innovation and supply chain with an international audience, projecting the lessons learned by transforming
+              logistics in the region.</p>
+          </div>
+          <span class="category-tag press-note">Press Note</span>
+        </a>
+
+        <a href="https://www.dezeen.com/2022/12/05/kelly-wearstler-arca-miami-art-week/" target="_blank"
+          class="work-item press-row" data-category="arca-ww press-note 2022 about-work art-design english"
+          data-media="Dezeen" data-date="December 05, 2022" data-lang="English" data-topic="ART & DESIGN"
+          data-tag="About my work" data-format="Press Note" data-title='"NUDO Collection: Kelly Wearstler x ARCA"'
+          data-subtitle="Marble furniture inspired by ancestral weaving techniques for Art Basel Miami."
+          data-why="It reflects my experience managing premium product launches, from technical coordination in global quarries to the complex logistics of high-value artistic pieces."
+          data-url="https://www.dezeen.com/2022/12/05/kelly-wearstler-arca-miami-art-week/" rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">Dezeen</span> <span>December 05, 2022</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: English</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: ART & DESIGN</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>About my work
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"NUDO Collection: Kelly Wearstler x ARCA" — <small>Marble furniture inspired by
+                ancestral weaving techniques for Art Basel Miami.</small></h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> It reflects my experience managing premium
+              product launches, from technical coordination in global quarries to the complex logistics of high-value
+              artistic pieces.</p>
+          </div>
+          <span class="category-tag press-note">Press Note</span>
+        </a>
+
+        <a href="https://entorno.vc/conoce-las-principales-startups-de-proptech-en-mexico/" target="_blank"
+          class="work-item press-row" data-category="homie article 2022 about-work fintech spanish" data-media="Entorno.vc"
+          data-date="November 23, 2022" data-lang="Spanish" data-topic="Fintech" data-tag="About my work" data-format="Article"
+          data-title='"Meet the main proptech startups in Mexico"'
+          data-subtitle="Profile of homie.mx as a reference in solutions for the residential rental market."
+          data-why="This mention validates the strategic appeal of the projects I have led. It highlights my focus on aligning accelerated growth with solid operational efficiency metrics for institutional investors."
+          data-url="https://entorno.vc/conoce-las-principales-startups-de-proptech-en-mexico/" rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">Entorno.vc</span> <span>November 23, 2022</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: Spanish</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: Fintech</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>About my work
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"Meet the main proptech startups in Mexico" — <small>Profile of <span
+                  translate="no">homie.mx</span> as a reference in solutions for the residential rental market.</small>
+            </h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> This mention validates the strategic appeal
+              of the projects I have led. It highlights my focus on aligning accelerated growth with solid operational
+              efficiency metrics for institutional investors.</p>
+          </div>
+          <span class="category-tag press-note">Press Note</span>
+        </a>
+
+        <a href="https://www.forbes.com.mx/nuestra-revista-las-100-startups-de-mayor-crecimiento-en-mexico/"
+          target="_blank" class="work-item press-row" data-category="homie press-note 2022 mention fintech spanish"
+          data-media="Forbes" data-date="April 26, 2022" data-lang="Spanish" data-topic="Fintech" data-tag="Mention"
+          data-format="Press Note" data-title='"100 fastest-growing startups: homie.mx"'
+          data-subtitle="Recognition of operational innovation in the digital real estate sector."
+          data-why="Being part of this list validates my operational capacity to scale high-impact startups and generate the necessary trust to attract top-tier institutional capital."
+          data-url="https://www.forbes.com.mx/nuestra-revista-las-100-startups-de-mayor-crecimiento-en-mexico/"
+          rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">Forbes</span> <span>April 26, 2022</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: Spanish</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: Fintech</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>Mention
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"100 fastest-growing startups: <span translate="no">homie.mx</span>" —
+              <small>Recognition of operational innovation in the digital real estate sector.</small>
+            </h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> Being part of this list validates my
+              operational capacity to scale high-impact startups and generate the necessary trust to attract top-tier
+              institutional capital.</p>
+          </div>
+          <span class="category-tag press-note">Press Note</span>
+        </a>
+
+        <a href="https://store.hbr.org/product/rappi-the-latin-american-super-app/w25235" target="_blank"
+          class="work-item press-row" data-category="rappi case-study 2021 about-work logistics-ops english"
+          data-media="Harvard Business Review" data-date="September 14, 2021" data-lang="English" data-topic="Logistics & Operations"
+          data-tag="About my work" data-format="Case Study" data-title='"Rappi: The Latin American Super App (Case Study)"'
+          data-subtitle="Analysis of the strategic evolution and expansion model of the platform."
+          data-why="This study explores the operational foundations and the multi-vertical strategy that allowed Rappi to scale rapidly across the region, a process I led as part of the core expansion team."
+          data-url="https://store.hbr.org/product/rappi-the-latin-american-super-app/w25235" rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">Harvard Business Review</span> <span>September 14, 2021</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: English</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: Logistics & Operations</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>About my work
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"Rappi: The Latin American Super App (Case Study)" — <small>Analysis of the
+                strategic evolution and expansion model of the platform.</small></h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> This study explores the operational
+              foundations and the multi-vertical strategy that allowed Rappi to scale rapidly across the region, a
+              process I led as part of the core expansion team.</p>
+          </div>
+          <span class="category-tag">Case Study</span>
+        </a>
+
+        <a href="https://repository.icesi.edu.co/server/api/core/bitstreams/5f9b8cf2-4efe-7785-e053-2cc003c84dc5/content"
+          target="_blank" class="work-item press-row"
+          data-category="article 2011 author commerce spanish"
+          data-media="Universidad Icesi" data-date="November 30, 2011" data-lang="Spanish"
+          data-topic="Commerce" data-tag="Author" data-format="Article"
+          data-title='"Internationalization in Business"'
+          data-subtitle="Degree project II: Faculty of Administrative and Economic Sciences. Program in Economics and International Business. Santiago de Cali."
+          data-why="This academic document addresses internationalization in business and reflects a formative background directly linked to commercial strategy and international expansion."
+          data-url="https://repository.icesi.edu.co/server/api/core/bitstreams/5f9b8cf2-4efe-7785-e053-2cc003c84dc5/content"
+          rel="noopener">
+          <div class="press-meta">
+            <span style="color: #3b82f6;">Universidad Icesi</span> <span>November 30, 2011</span> <span
+              style="color: #94a3b8; font-size: 0.85rem;">Original Language: Spanish</span>
+            <div
+              style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 4px;">
+              Topic: Commerce</div>
+            <div
+              style="color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 2px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="0.9em"
+                height="0.9em" style="vertical-align: middle; margin-right: 4px;">
+                <path
+                  d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+              </svg>Author
+            </div>
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">"Internationalization in Business" — <small>Degree project II: Faculty of
+                Administrative and Economic Sciences. Program in Economics and International Business. Santiago de
+                Cali.</small></h3>
+            <p class="relevance-blurb"><strong>Why it's relevant:</strong> This academic work documents a background
+              focused on business internationalization and commercial expansion.</p>
+          </div>
+          <span class="category-tag">Article</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="big-footer" id="contact">
+      <div class="container">
+        <div class="footer-inner">
+          <h2 class="hero-title">Contact me on <br>LinkedIn</h2>
+          <div
+            style="margin-top: 4rem; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap;">
+            <a href="https://www.linkedin.com/in/sebastian-castellanos-duque/" class="btn-magnetic" target="_blank"
+              rel="noopener"><i class="fa-brands fa-linkedin"></i> CONNECT</a>
+            <div class="footer-info">
+              <p>Miami, FL — <span id="local-time">00:00 AM</span></p>
+              <p><a href="mailto:contact@scastellanosduque.com">contact@scastellanosduque.com</a></p>
+              <p>© <span id="year"></span> Sebastián Castellanos Duque</p>
+              <p style="font-size: 0.85rem; color: var(--text-dim); opacity: 0.8; margin-top: -1rem;">COO of <span
+                  translate="no">ARCA WW</span> | Partner at <span translate="no">Rappi</span> | Ecommerce and
+                Operations at Scale Strategist</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Modal de Previsualización de Exportación -->
+  <div id="exportPreviewModal" class="modal is-hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Vista Previa de Exportación</h3>
+        <div class="export-actions">
+          <button id="downloadCsvBtn" class="btn-magnetic" style="background: #10b981;">
+            <i class="fas fa-file-csv"></i> CSV
+          </button>
+          <button id="downloadPdfBtn" class="btn-magnetic" style="background: #ef4444;">
+            <i class="fas fa-file-pdf"></i> PDF
+          </button>
+        </div>
+        <button id="closePreviewModal" class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Se exportarán <strong id="previewCount">0</strong> elementos visibles.</p>
+        <div class="table-responsive">
+          <div id="previewTableContainer">
+            <!-- La tabla se genera aquí dinámicamente -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mini Footer Flotante -->
+  <div id="miniFooter" class="mini-footer-floating">
+    <div class="mini-footer-container">
+      <div class="mini-footer-left">
+        <span class="mini-footer-name">Sebastián Castellanos Duque</span>
+        <span class="mini-footer-separator">|</span>
+        <span class="mini-footer-role">COO ARCA WW, Partner at Rappi</span>
+      </div>
+      <div class="mini-footer-center">
+        <a href="mailto:contact@scastellanosduque.com" class="mini-footer-email">
+          <i class="fa-regular fa-envelope"></i> contact@scastellanosduque.com
+        </a>
+      </div>
+      <div class="mini-footer-right">
+        <a href="https://www.linkedin.com/in/sebastian-castellanos-duque/" class="mini-footer-connect" target="_blank"
+          rel="noopener">
+          <i class="fa-brands fa-linkedin"></i> CONNECT
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón de Volver Arriba -->
+  <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/filter-responsive.js"></script>
+  <script src="js/filter-note-toggle.js"></script>
+</body>
+
+</html>
+
+<!--__/\\\\\\\\\\\\\\\__/\\\________/\\\____/\\\\\\\\\________/\\\\\\\\\___________/\\\\\_______/\\\\\_____/\\\____________/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\____________/\\\_________________/\\\\\\\\\_____________________/\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\\\\__/\\\\\\\\\\\\\\\_______________/\\\\\\\\\\\_______/\\\\\\\\\_______________/\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\__________________/\\\\\\\\\__/\\\________/\\\_        
+     _\///////\\\/////__\/\\\_______\/\\\__/\\\///////\\\____/\\\///////\\\_______/\\\///\\\____\/\\\\\\___\/\\\___________\/\\\////////\\\__\/\\\///////////____________\/\\\_______________/\\\\\\\\\\\\\________________/\\\////////__\/////\\\///__\///////\\\/////__\/\\\///////////______________/\\\/////////\\\___/\\\\\\\\\\\\\____________\/\\\////////\\\__\/\\\///////////________________/\\\////////__\/\\\_______\/\\\_       
+      _______\/\\\_______\/\\\_______\/\\\_\/\\\_____\/\\\___\/\\\_____\/\\\_____/\\\/__\///\\\__\/\\\/\\\__\/\\\___________\/\\\______\//\\\_\/\\\_______________________\/\\\______________/\\\/////////\\\_____________/\\\/_______________\/\\\___________\/\\\_______\/\\\________________________\//\\\______\///___/\\\/////////\\\___________\/\\\______\//\\\_\/\\\_________________________/\\\/___________\//\\\______/\\\__      
+       _______\/\\\_______\/\\\_______\/\\\_\/\\\\\\\\\\\/____\/\\\\\\\\\\\/_____/\\\______\//\\\_\/\\\\//\\\\/\\\___________\/\\\_______\/\\\_\/\\\\\\\\\\\_______________\/\\\_____________\/\\\_______\/\\\____________/\\\_________________\/\\\___________\/\\\_______\/\\\\\\\\\\\_________________\////\\\_________\/\\\_______\/\\\___________\/\\\_______\/\\\_\/\\\\\\\\\\\________________/\\\______________\//\\\____/\\\___     
+        _______\/\\\_______\/\\\_______\/\\\_\/\\\//////\\\____\/\\\//////\\\____\/\\\_______\/\\\_\/\\\_\//\\\/\\\___________\/\\\_______\/\\\_\/\\\///////________________\/\\\_____________\/\\\\\\\\\\\\\\\___________\/\\\_________________\/\\\___________\/\\\_______\/\\\///////_____________________\////\\\______\/\\\\\\\\\\\\\\\___________\/\\\_______\/\\\_\/\\\///////________________\/\\\_______________\//\\\__/\\\____    
+         _______\/\\\_______\/\\\_______\/\\\_\/\\\____\//\\\___\/\\\____\//\\\___\//\\\______/\\\__\/\\\_\//\\\/\\\___________\/\\\_______\/\\\_\/\\\_______________________\/\\\_____________\/\\\/////////\\\___________\//\\\________________\/\\\___________\/\\\_______\/\\\_______________________________\////\\\___\/\\\/////////\\\___________\/\\\_______\/\\\_\/\\\_______________________\//\\\_______________\//\\\/\\\_____   
+          _______\/\\\_______\//\\\______/\\\__\/\\\_____\//\\\__\/\\\_____\//\\\___\///\\\__/\\\____\/\\\__\//\\\\\\___________\/\\\_______/\\\__\/\\\_______________________\/\\\_____________\/\\\_______\/\\\______________\////\\\\\\\\\__/\\\\\\\\\\\_______\/\\\_______\/\\\\\\\\\\\\\\\___________\///\\\\\\\\\\\/___\/\\\_______\/\\\___________\/\\\\\\\\\\\\/___\/\\\\\\\\\\\\\\\______________\////\\\\\\\\\______\//\\\_______ 
+            _______\///___________\/////////_____\///________\///__\///________\///_______\/////_______\///_____\/////____________\////////////_____\///////////////____________\///////////////__\///________\///__________________\/////////__\///////////________\///________\///////////////______________\///////////_____\///________\///____________\////////////_____\///////////////__________________\/////////________\///________
+      
+      
+                                                                     =#                                    
+                                                                    =@@#                                   
+                                                                   -@@@@*                                  
+                                                                  :@@@@@@+                                 
+                             .=============.           :==========%@@@@@@@=                                
+                              #@@@@@@@@@@@+           :@@@@@@@@@@@@@@@@@@@@-                               
+                              .%@@@@@@@@@*           :@@@@@@@@@@@@@@@@@@@@@@-                              
+                               .%@@@@@@@#           :%@@@@@@@@@@@@@@@@@@@@@@#                              
+                                :@@@@@@%.          .%@@@@@@@@@@@@@@@@@@@@@*:                               
+                                 -@@@@%.          .%@@@@@@@@@@@@@@@@@@@%+.                                 
+                                  ----.          .#@@@@@@@@%-----------                                    
+                                                 #@@@@@@@@=                                                
+                                                *@@@@@@@#.                                                 
+                                               *@@@@@@%-                                                   
+                                              +@@@@@@*.                                                    
+                                             +@@@@@%:                                                      
+                                            =@@@@@+                                                        
+                                ...........=@@@@#.                                                         
+                               :%@@@@@@@@@@@@@%-                                                           
+                                .############*.  
+
+This template was edited by TURRON DE LA CITE SA DE CV // ADVERTISING AGENCY // for more information contact via tci.publicidad@hotmail.com 
+Developer: ALÁN MEZA CHÁVEZ https://www.linkedin.com/in/alanmzch/-->
