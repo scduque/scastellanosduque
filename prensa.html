@@ -33,6 +33,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    @media (max-width: 768px), print {
+      .link-text { display: none !important; }
+    }
+  </style>
 </head>
 
 <body data-barba="wrapper">
@@ -1128,7 +1133,7 @@
           <div
             style="margin-top: 4rem; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap;">
             <a href="https://www.linkedin.com/in/sebastian-castellanos-duque/" class="btn-magnetic" target="_blank"
-              rel="noopener"><i class="fa-brands fa-linkedin"></i> CONNECT</a>
+              rel="noopener"><i class="fa-brands fa-linkedin"></i> <span class="link-text">CONNECT</span></a>
             <div class="footer-info">
               <p>Miami, FL — <span id="local-time">00:00 AM</span></p>
               <p><a href="mailto:contact@scastellanosduque.com">contact@scastellanosduque.com</a></p>
@@ -1183,10 +1188,8 @@
         </a>
       </div>
       <div class="mini-footer-right">
-        <a href="https://www.linkedin.com/in/sebastian-castellanos-duque/" class="mini-footer-connect" target="_blank"
-          rel="noopener">
-          <i class="fa-brands fa-linkedin"></i> CONNECT
-        </a>
+            <a href="https://www.linkedin.com/in/sebastian-castellanos-duque/" class="mini-footer-connect" target="_blank"
+              rel="noopener"><i class="fa-brands fa-linkedin"></i> <span class="link-text">CONNECT</span></a>
       </div>
     </div>
   </div>
@@ -1206,6 +1209,17 @@
   <script src="js/main.js"></script>
   <script src="js/filter-responsive.js"></script>
   <script src="js/filter-note-toggle.js"></script>
+  <script>
+    function hideLinkedInText() {
+      if (window.innerWidth <= 768) {
+        document.querySelectorAll('a.btn-magnetic .link-text, a.mini-footer-connect .link-text').forEach(el => {
+          el.style.display = 'none';
+        });
+      }
+    }
+    window.addEventListener('load', hideLinkedInText);
+    window.addEventListener('resize', hideLinkedInText);
+  </script>
 </body>
 
 </html>
