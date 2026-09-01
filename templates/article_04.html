@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============================================================
+     SEO · EDIT THESE METAS FOR EACH ARTICLE
+     ============================================================ -->
+<title>¿Estamos Listos para la IA? El Verdadero Desafío No Es Técnico · Sebastián Castellanos Duque</title>
+<meta name="description" content="La batalla por el futuro corporativo la gana quien tiene mayor capacidad de adaptación organizacional, no la mejor tecnología">
+<meta name="author" content="Sebastián Castellanos Duque">
+<meta property="og:title" content="¿Estamos Listos para la IA? El Verdadero Desafío No Es Técnico">
+<meta property="og:description" content="La batalla por el futuro corporativo la gana quien tiene mayor capacidad de adaptación organizacional, no la mejor tecnología">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://scastellanosduque.com/templates/article_04.html">
+<link rel="canonical" href="https://scastellanosduque.com/templates/article_04.html">
+
+<!-- Fonts via fontsource -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/source-serif-4@latest/latin-400-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/source-serif-4@latest/latin-400-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/source-serif-4@latest/latin-600-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-400-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-500-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-600-normal.css">
+
+<style>
+  :root {
+    --paper: #ffffff;
+    --bg: #eceae4;
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a45;
+    --muted: #8a8a82;
+    --accent: #616B53;
+    --line: rgba(26, 26, 26, 0.12);
+    --page-max: 720px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.7;
+  }
+
+  /* Paper page container */
+  .page {
+    max-width: var(--page-max);
+    margin: 0 auto;
+    background: var(--paper);
+    min-height: 100vh;
+    padding: 80px 72px 120px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.04);
+  }
+
+  /* Article header */
+  .article-header {
+    margin-bottom: 56px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .article-meta {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+
+  h1.article-title {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin: 0 0 24px 0;
+  }
+
+  .article-subtitle {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  .article-byline {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 28px;
+    letter-spacing: 0.02em;
+  }
+  .article-byline strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* Featured image */
+  .article-image { margin: 48px 0; }
+  .article-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2px;
+  }
+  .article-image figcaption {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 12px;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+  }
+
+  /* ============================================================
+     ARTICLE BODY — STRUCTURED CONTENT
+     Use this block if you prefer to paste HTML directly.
+     ============================================================ */
+  .article-body p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--ink-soft);
+    margin: 0 0 1.5em 0;
+    text-align: left;
+    font-weight: 400;
+  }
+
+  .article-body p:first-of-type::first-letter {
+    font-size: 3.2em;
+    font-weight: 600;
+    float: left;
+    line-height: 0.9;
+    margin: 0.05em 0.12em 0 0;
+    color: var(--ink);
+  }
+
+  .article-body h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--ink);
+    margin: 2em 0 0.8em 0;
+    letter-spacing: -0.01em;
+  }
+
+  .article-body h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 2.5em 0 1em 0;
+  }
+
+  .article-body a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  .article-body a:hover { color: var(--ink); }
+
+  .article-body ul, .article-body ol {
+    font-size: 18px;
+    color: var(--ink-soft);
+    margin: 0 0 1.5em 1.2em;
+    line-height: 1.8;
+  }
+  .article-body li { margin-bottom: 0.5em; }
+
+  blockquote.article-quote {
+    margin: 3em 0;
+    padding: 0 0 0 32px;
+    border-left: 3px solid var(--accent);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+  blockquote.article-quote cite {
+    display: block;
+    margin-top: 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  .article-separator {
+    text-align: center;
+    margin: 3em 0;
+    color: var(--muted);
+    letter-spacing: 1em;
+    font-size: 14px;
+  }
+
+  /* ============================================================
+     RAW TEXT BLOCK — PASTE PLAIN TEXT HERE
+     The script at the bottom transforms this into structured HTML.
+     Just paste your plain text between the START/END markers.
+     ============================================================ */
+  .raw-article {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--ink-soft);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Styles applied by the parser to generated elements */
+  .raw-article .parsed-paragraph {
+    margin: 0 0 1.5em 0;
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--ink-soft);
+  }
+  .raw-article .parsed-paragraph.first-paragraph::first-letter {
+    font-size: 3.2em;
+    font-weight: 600;
+    float: left;
+    line-height: 0.9;
+    margin: 0.05em 0.12em 0 0;
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+  }
+  .raw-article .parsed-h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--ink);
+    margin: 2em 0 0.8em 0;
+    letter-spacing: -0.01em;
+  }
+  .raw-article .parsed-h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 2.5em 0 1em 0;
+  }
+  .raw-article .parsed-list {
+    margin: 0 0 1.5em 0;
+    padding: 0;
+    list-style: none;
+  }
+  .raw-article .parsed-list li {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--ink-soft);
+    margin-bottom: 0.8em;
+    padding-left: 24px;
+    position: relative;
+  }
+  .raw-article .parsed-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .raw-article .parsed-list li strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .raw-article .parsed-separator {
+    text-align: center;
+    margin: 3em 0;
+    color: var(--muted);
+    letter-spacing: 1em;
+    font-size: 14px;
+  }
+  .raw-article .parsed-bio {
+    margin-top: 3em;
+    padding-top: 2em;
+    border-top: 1px solid var(--line);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+  }
+  .raw-article .parsed-bio h4 {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin: 0 0 16px 0;
+  }
+  .raw-article .parsed-signature {
+    margin-top: 2.5em;
+    padding-top: 1.5em;
+    border-top: 1px solid var(--line);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--muted);
+  }
+  .raw-article .parsed-signature .sig-name {
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .raw-article .parsed-signature .sig-role {
+    color: var(--ink-soft);
+    font-size: 13px;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .raw-article .parsed-signature a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .raw-article .parsed-signature a:hover {
+    text-decoration: underline;
+  }
+
+  /* Footer */
+  .article-footer {
+    margin-top: 80px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+  .article-footer a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    .page {
+      padding: 48px 28px 80px;
+      box-shadow: none;
+    }
+    .raw-article .parsed-paragraph,
+    .raw-article .parsed-list li,
+    .article-body p,
+    .article-body ul,
+    .article-body ol {
+      font-size: 17px;
+    }
+    blockquote.article-quote {
+      font-size: 20px;
+      padding-left: 20px;
+    }
+    h1.article-title { font-size: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<article class="page">
+
+  <!-- ============================================================
+       ARTICLE HEADER
+       ============================================================ -->
+  <header class="article-header">
+    <div class="article-meta">E-Commerce · Artificial Intelligence · Technology</div>
+    <h1 class="article-title">¿Estamos Listos para la IA? El Verdadero Desafío No Es Técnico</h1>
+    <p class="article-subtitle">La batalla por el futuro corporativo la gana quien tiene mayor capacidad de adaptación organizacional, no la mejor tecnología</p>
+    <div class="article-byline">
+      By <strong>Sebastián Castellanos Duque</strong> · July 08, 2026, 15:19 GMT
+    </div>
+  </header>
+
+ <!-- QUOTE DESTACADO -->
+    <blockquote class="article-quote">
+      "La IA es el motor, pero la arquitectura organizacional es el chasis. 
+      Si su estructura es rígida, el motor más potente del mundo solo logrará 
+      que el vehículo se destroce en la primera curva."
+      <cite>— Sebastián Castellanos Duque</cite>
+    </blockquote>
+
+  <!-- ============================================================
+       RAW TEXT BLOCK
+       ============================================================ -->
+  <div class="raw-article" id="rawArticle">
+<!-- =================== PASTE START =================== -->
+MIAMI, FL, UNITED STATES, July 8, 2026 -- La Inteligencia Artificial promete una revolución económica sin precedentes. Los titulares validan este entusiasmo diariamente y anuncian un futuro automatizado. Sin embargo, mientras el mundo se obsesiona con los algoritmos, una contradicción central amenaza con descarrilar esta promesa: nuestras estructuras de liderazgo y operaciones son simplemente demasiado obsoletas para navegar esta nueva era.
+
+Como Estratega de Operaciones a Escala, observo que el principal punto de estrangulamiento estructural no está en los centros de datos, sino en la sala de juntas. Investigaciones recientes, como el informe "State of Generative AI in the Enterprise" de Deloitte, revelan una realidad incómoda: los ejecutivos de alto nivel dedican una atención desproporcionada al corto plazo. Mientras la IA exige una reinvención estructural profunda, la mayoría de los líderes permanecen atrapados en la tiranía de los resultados trimestrales.
+
+El resultado es predecible: la brecha entre los pilotos experimentales de IA y la producción a escala empresarial sigue siendo abismal, porque las compañías intentan aplicar tecnología de vanguardia a arquitecturas organizacionales obsoletas.
+
+La realidad operativa en el terreno es muy diferente. No son los ejecutivos del C-suite quienes diseñan las nuevas formas de trabajar, sino los líderes de proyectos y los operadores de primera línea. En el vertiginoso sector fintech y en las startups donde la presión competitiva es asfixiante, la agilidad ya no es un concepto de libro de texto: es la ventaja competitiva primordial. La flexibilidad organizacional define a los sobrevivientes.
+
+Comprender cómo se consume un recurso tecnológico, cómo se integra un flujo de trabajo o cómo se escala un proceso no es tarea exclusiva de los ingenieros. Es la nueva alfabetización operativa del COO.
+
+El debate sobre el futuro de la empresa ha cambiado para siempre. La verdadera batalla no la gana quien tiene la mejor tecnología, sino quien posee la mayor capacidad de adaptación. Para liderar esta transformación post-IA, debemos cultivar las competencias de un líder funcional.
+
+¿Cómo llevamos esta teoría a la práctica operativa?
+
+Primero: descentralizar la experimentación. Empoderar a los líderes de proyectos para que prototipen flujos de trabajo con IA sin pedir permiso a la alta dirección. La innovación surge de la fricción diaria, no de los memorándums descendentes.
+
+Segundo: fomentar la fluidez interfuncional y eliminar los silos. Un Estratega de Operaciones a Escala tiene la capacidad de moverse fluidamente entre funciones, negociaciones y geografías para generar valor donde más se necesita. Exija que sus equipos operen con esta misma transversalidad y entiendan el negocio como un ecosistema, no como departamentos aislados.
+
+Tercero: rediseñar los procesos antes de automatizarlos. El error más costoso es aplicar IA para acelerar un proceso defectuoso. Reimagine el flujo de trabajo desde cero, porque la tecnología debe empoderar una nueva arquitectura, no embalsamar la antigua.
+
+La IA es el motor, pero la arquitectura organizacional es el chasis. Si su estructura es rígida, el motor más potente del mundo solo logrará que el vehículo se destroce en la primera curva. Debemos construir organizaciones que se doblen sin romperse.
+
+Acerca de Sebastián Castellanos Duque:
+Sebastián Castellanos Duque es Estratega de Operaciones a Escala, Economista y Negociador Internacional especializado en transformación organizacional y escalabilidad de ventures. Su enfoque se centra en diseñar arquitecturas operativas ágiles que permiten a las empresas navegar la complejidad global, integrar tecnologías disruptivas y liderar negociaciones transfronterizas en mercados altamente competitivos.
+Sebastián Castellanos Duque
+COO ARCA WW | Partner at Rappi
+contact@scastellanosduque.com
+Visit us on social media:
+LinkedIn
+<!-- =================== PASTE END =================== -->
+  </div>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="article-footer">
+    <p>
+      © 2026 Sebastián Castellanos Duque · 
+      <a href="https://scastellanosduque.com">scastellanosduque.com</a>
+    </p>
+  </footer>
+
+</article>
+
+<!-- ============================================================
+     PARSER SCRIPT
+     Transforms plain text inside .raw-article into structured HTML.
+     Detects: paragraphs, numbered headings (1. 2. 3...), 
+     bold lead-ins (Title: text), bio section, and signature.
+     ============================================================ -->
+<script>
+(function() {
+  const raw = document.getElementById('rawArticle');
+  if (!raw) return;
+
+  const text = raw.innerText.trim();
+  const lines = text.split('\n');
+  
+  let html = '';
+  let isFirstParagraph = true;
+  let inBio = false;
+  let inSignature = false;
+  let signatureLines = [];
+  let listBuffer = [];
+  
+  // Patterns
+  const numberedHeading = /^(\d+)\.\s+(.+)$/;
+  const boldLeadIn = /^([A-Z][A-Za-z\s,':\-]+):\s+(.+)$/;
+  const bioStart = /^About\s+Sebastián/i;
+  const sigName = /^Sebastián Castellanos Duque$/;
+  const sigRole = /^(COO|Partner|Director|CEO|Founder)/i;
+  const sigEmail = /^[\w.+-]+@[\w-]+\.[\w.-]+$/;
+  const sigSocial = /^(Visit us on|Follow|LinkedIn|Twitter|Instagram)/i;
+  
+  function flushList() {
+    if (listBuffer.length > 0) {
+      html += '<ul class="parsed-list">';
+      listBuffer.forEach(item => {
+        // Bold the part before the colon
+        const match = item.match(/^([^:]+):\s*(.+)$/);
+        if (match) {
+          html += `<li><strong>${match[1]}:</strong> ${match[2]}</li>`;
+        } else {
+          html += `<li>${item}</li>`;
+        }
+      });
+      html += '</ul>';
+      listBuffer = [];
+    }
+  }
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+    
+    // Skip empty lines (they separate paragraphs)
+    if (line === '') continue;
+    
+    // Signature detection
+    if (sigName.test(line) || sigRole.test(line) || sigEmail.test(line) || sigSocial.test(line) || line === 'LinkedIn') {
+      flushList();
+      if (!inSignature) {
+        inSignature = true;
+        html += '<div class="parsed-signature">';
+      }
+      if (sigName.test(line)) {
+        html += `<span class="sig-name">${line}</span>`;
+      } else if (sigRole.test(line)) {
+        html += `<span class="sig-role">${line}</span>`;
+      } else if (sigEmail.test(line)) {
+        html += `<span class="sig-role"><a href="mailto:${line}">${line}</a></span>`;
+      } else if (line === 'LinkedIn') {
+        html += `<span class="sig-role"><a href="https://www.linkedin.com/in/sebastian-castellanos-duque/" target="_blank">LinkedIn →</a></span>`;
+      } else if (sigSocial.test(line)) {
+        // Skip "Visit us on social media:" line
+        continue;
+      }
+      continue;
+    }
+    
+    // Bio section
+    if (bioStart.test(line)) {
+      flushList();
+      inBio = true;
+      html += '<div class="parsed-bio"><h4>About the Author</h4>';
+      // The rest of this line after "About X" is the bio text
+      const bioText = line.replace(/^About\s+[^,]+,\s*/i, '').trim();
+      if (bioText) {
+        html += `<p class="parsed-paragraph">${bioText}</p>`;
+      }
+      continue;
+    }
+    
+    // Numbered headings: "1. The Hidden Drain..."
+    const numMatch = line.match(numberedHeading);
+    if (numMatch) {
+      flushList();
+      html += `<h2 class="parsed-h2">${numMatch[2]}</h2>`;
+      continue;
+    }
+    
+    // Check if next line is empty (end of paragraph) or if this is a list item
+    // List items are short lines with "Title: description" pattern after a list intro
+    const prevNonEmpty = findPrevNonEmpty(lines, i);
+    const isListIntro = prevNonEmpty && /at the forefront:$/i.test(prevNonEmpty);
+    
+    if (isListIntro && boldLeadIn.test(line)) {
+      listBuffer.push(line);
+      // Check if next line is also a list item
+      const nextNonEmpty = findNextNonEmpty(lines, i);
+      if (!nextNonEmpty || !boldLeadIn.test(nextNonEmpty)) {
+        flushList();
+      }
+      continue;
+    }
+    
+    // Regular paragraph
+    flushList();
+    if (isFirstParagraph) {
+      html += `<p class="parsed-paragraph first-paragraph">${line}</p>`;
+      isFirstParagraph = false;
+    } else {
+      html += `<p class="parsed-paragraph">${line}</p>`;
+    }
+  }
+  
+  flushList();
+  
+  if (inBio) html += '</div>';
+  if (inSignature) html += '</div>';
+  
+  raw.innerHTML = html;
+  
+  function findPrevNonEmpty(lines, idx) {
+    for (let j = idx - 1; j >= 0; j--) {
+      if (lines[j].trim() !== '') return lines[j].trim();
+    }
+    return null;
+  }
+  
+  function findNextNonEmpty(lines, idx) {
+    for (let j = idx + 1; j < lines.length; j++) {
+      if (lines[j].trim() !== '') return lines[j].trim();
+    }
+    return null;
+  }
+})();
+</script>
+
+</body>
+</html>
