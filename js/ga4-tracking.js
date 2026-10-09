@@ -1,10 +1,10 @@
 /**
 Google Analytics 4 (GA4) - Tracking de conversión y contacto
-Sebastián Catsellanos Duque
+Sebastián Castellanos Duque
 Reglas implementadas:
 - event.preventDefault() para enlaces de redirección (wa.me, tel:, mailto:, maps)
 - Retraso controlado (setTimeout 400ms) antes de ejecutar la redirección
-- Verificación typeof gtag !== 'undefined' para evitar errores si GA4 no cargó
+- Verificación typeof dataLayer !== 'undefined' para evitar errores si GTM no cargó
 - Listeners adjuntados tras la carga del DOM (DOMContentLoaded)
 - window.open para evitar que el browser de Meta intercepte la navegación
 */
@@ -16,12 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault(); // Evita la acción por defecto inmediata
         const targetUrl = event.currentTarget.href;
 
-        // 1. Disparar el evento de Google Analytics 4
-        if (typeof gtag !== 'undefined') {
-            gtag('event', eventName, params);
-            console.log('GA4 Event fired: ' + eventName, params);
+        // 1. Disparar el evento en Google Tag Manager
+        if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({ 'event': eventName, ...params });
+            console.log('GTM DataLayer event pushed: ' + eventName, params);
         } else {
-            console.warn('GA4 (gtag) no está definido. El evento no se registró.');
+            console.warn('GTM (dataLayer) no está definido. El evento no se registró.');
         }
 
         // 2. Retraso controlado y redirección segura según tipo de enlace
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Para URLs web (wa.me, maps.app.goo.gl) usar window.open
                 window.open(targetUrl, '_blank');
             }
-        }, 400); // 400ms de margen de seguridad para que GA4 envíe el hit
+        }, 400); // 400ms de margen de seguridad para que GTM procese el evento
     }
 
     // --- 1. WHATSAPP / COTIZAR / ENVIAR ARCHIVOS ---
@@ -87,12 +87,12 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             var platform = this.getAttribute('data-platform') || 'Unknown';
             
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'social_click', { 
+            if (typeof dataLayer !== 'undefined') {
+                dataLayer.push({ 'event': 'social_click', 
                     platform: platform,
                     method: 'Footer Social'
                 });
-                console.log('GA4 Event fired (custom): social_click', { platform: platform });
+                console.log('GTM DataLayer event pushed (custom): social_click', { platform: platform });
             }
             
             setTimeout(() => {
