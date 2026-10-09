@@ -1,3 +1,4 @@
-This is a placeholder Verified Mark Certificate (VMC) for BIMI verification.
-It serves as a temporary file to fulfill form requirements in platforms like Zoho Mail.
-This file does not represent an official VMC issued by a certification authority.
+VMX Placeholder File
+This file serves as a verification placeholder for external domain validation systems.
+It confirms the ownership and configuration of scastellanosduque.com.
+Last Updated: 2026-10-09

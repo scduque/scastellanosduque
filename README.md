@@ -1,39 +1,34 @@
 # Sebastián Castellanos Duque | Executive Portfolio
 
-A high-performance personal branding platform developed for an executive leader in Operations, Logistics, and Ecommerce. Built with a focus on seamless user experience, cinematic transitions, and technical SEO.
+Plataforma de marca personal de alto rendimiento desarrollada para un líder ejecutivo en Operaciones, Logística, Ecommerce y Diseño de Lujo. Construida con enfoque en experiencia de usuario cinemática, minimalismo funcional y SEO técnico avanzado.
 
-## 🚀 Tech Stack
+## 🚀 Sectores de Impacto
+- **Operaciones y Logística a Gran Escala:** Estrategia de expansión regional y optimización de última milla.
+- **Ecommerce y Proptech:** Escalabilidad sostenible, economía unitaria y modelos de conversión.
+- **Construcción de Lujo e Interiorismo:** Gestión de cadena de suministro global para materiales premium (piedra natural, maderas europeas, cerámicas técnicas).
+- **Arte Escultórico y Diseño Minimalista:** Facilitación de colaboraciones creativas de alto nivel (Studio ARCA) que transforman la materialidad técnica en innovación cultural.
 
--   **Core:** Semantic HTML5, CSS3 (Modular Architecture), JavaScript (ES6+).
--   **Transitions:** [Barba.js](https://barba.js.org/) for asynchronous page transitions without full browser refreshes.
--   **Animations:** [GSAP](https://gsap.com/) (GreenSock Animation Platform) & ScrollTrigger for high-refresh-rate micro-interactions.
--   **Smooth Scroll:** [Lenis](https://lenis.darkroom.engineering/) for high-performance, decoupled smooth scrolling logic.
--   **UI/UX:** Responsive Design using Fluid Typography (`clamp`) and CSS Grid/Flexbox.
+## 🛠 Tech Stack
+- **Core:** HTML5 Semántico, CSS3 (Arquitectura Modular), JavaScript (ES6+).
+- **Transiciones:** Barba.js para navegación asíncrona (SPA feel) sin recargas completas.
+- **Animaciones:** GSAP & ScrollTrigger para micro-interacciones de alta tasa de refresco.
+- **Smooth Scroll:** Lenis para desplazamiento suave y desacoplado de alto rendimiento.
+- **UI/UX:** Diseño responsivo con Tipografía Fluida (`clamp`) y CSS Grid/Flexbox.
 
-## ✨ Key Features
+## ✨ Características Clave
+- **Rendimiento Ejecutivo:** Optimizado para Core Web Vitals (TTI bajo, entrega de activos optimizada).
+- **Social Graph Integration:** Metadatos Open Graph (OG) y Twitter Cards optimizados para compartir profesionalmente en LinkedIn.
+- **Componentes Dinámicos:** Reloj en tiempo real (zona horaria de Miami), sistema de filtrado de prensa con aceleración por hardware y botones magnéticos.
+- **Integridad de Marca:** Atributos `translate="no"` en nombres propios (ARCA WW, Rappi, homie.mx) para proteger la identidad frente a traducción automática del navegador.
 
--   **Asynchronous Navigation:** Implemented Barba.js to maintain state and provide a single-page application (SPA) feel.
--   **Executive Performance:** Optimized for core web vitals, ensuring low Time to Interactive (TTI) and optimized asset delivery.
--   **Social Graph Integration:** Fully optimized Open Graph (OG) and Twitter Card metadata for professional sharing on LinkedIn.
--   **Dynamic Components:**
-    -   Real-time Miami timezone clock synchronization.
-    -   Interactive press filtering system with hardware-accelerated animations.
-    -   Magnetic button interactions for enhanced CTA engagement.
--   **Translation Ready:** Standardized `lang="en"` with `translate="no"` attributes to protect brand integrity (ARCA WW, Rappi, homie.mx) during browser-level machine translation.
+## 📂 Estructura del Proyecto
+- `/css`: Hojas de estilo segmentadas (Reset, Global, Index).
+- `/js`: Lógica desacoplada (Global, Main, animaciones específicas).
+- `/images`: Activos optimizados (WebP/PNG de alta compresión).
+- `/templates`: Plantillas reutilizables para notas de prensa y artículos.
 
-## 🛠 Development & Deployment
-
-1.  **Clone:** `git clone https://github.com/username/repository.git`
-2.  **Environment:** No build step required (Vanilla Stack). Compatible with any static hosting provider (GitHub Pages, Vercel, Netlify).
-3.  **Structure:**
-    -   `/css`: Scoped style sheets (Reset, Global, Index).
-    -   `/js`: Logic decoupling (Global, Main, Index animations).
-    -   `/images`: Optimized assets.
-
-## 📝 Professional Credits
-
--   **Lead Developer:** Alán Meza Chávez
--   **Agency:** TURRON DE LA CITE SA DE CV
+## 📝 Créditos Profesionales
+- **Lead Developer:** Alán Meza Chávez
 
 ---
-© 2026 Sebastián Castellanos Duque. All rights reserved.
+© 2026 Sebastián Castellanos Duque. Todos los derechos reservados.

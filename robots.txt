@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
+Allow: /images/
+Allow: /css/
+Disallow: /js/
+
+# Bloquear rastreo de archivos de configuración o temporales si los hubiera
+Disallow: /vmc-empty.txt
 
 Sitemap: https://scastellanosduque.com/sitemap.xml
